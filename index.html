@@ -417,6 +417,7 @@
           <div class="flex justify-between"><span class="text-gray-400">Single Instance IPC:</span> <span class="text-cyan-400 font-semibold">Win32 Named Event (Zero Poll)</span></div>
           <div class="flex justify-between"><span class="text-gray-400">Desktop Display Dimming:</span> <span class="text-white font-semibold">VESA DDC/CI (dxva2.dll)</span></div>
           <div class="flex justify-between"><span class="text-gray-400">Laptop Screen Dimming:</span> <span class="text-white font-semibold">WMI root\wmi Method</span></div>
+          <div class="flex justify-between"><span class="text-gray-400">PCIe Link Power (ASPM):</span> <span class="text-emerald-400 font-semibold">Dynamic Maximum Savings</span></div>
           <div class="flex justify-between"><span class="text-gray-400">Autostart Registry:</span> <span class="text-white font-semibold">HKCU\...\CurrentVersion\Run</span></div>
         </div>
       </div>
@@ -444,7 +445,7 @@
           </button>
         </div>
         <div id="hashValue" class="text-gray-300 break-all select-all font-mono text-[11px]">
-          776F8552F55EDDCEC747F0CDC1375EC3170A4B756DA271FEBF61D0A17BF2BC06
+          AEED6BF5CB831D704851040CCA841A6AF35BAE6F0DA4BED22A1D11202F262C0A
         </div>
       </div>
     </div>
@@ -516,7 +517,7 @@
         bEco.className = "py-3 px-4 rounded-xl font-bold text-xs sm:text-sm transition-all border border-emerald-500/50 bg-emerald-600 text-white shadow-lg shadow-emerald-600/30";
         mBadge.textContent = "ECO SAVER ACTIVE";
         mBadge.className = "text-[11px] font-mono font-bold px-3 py-1 rounded-md bg-emerald-950/80 text-emerald-400 border border-emerald-500/30";
-        mDesc.innerHTML = `<span>🌿 <strong>ECO SAVER</strong>: Screen 10% • CPU capped at 30% multiplier (Deep hardware power savings).</span><span class="font-mono text-xs text-emerald-400">Max Savings</span>`;
+        mDesc.innerHTML = `<span>🌿 <strong>ECO SAVER</strong>: Screen 10% • CPU capped at 30% • PCIe ASPM Max Savings (GPU / SSD idle sleep).</span><span class="font-mono text-xs text-emerald-400">Max Savings</span>`;
         tWatts.textContent = "28.5 W";
         sPct.textContent = "-70% vs Max Boost";
         sPct.className = "text-xs font-bold text-emerald-400 font-mono px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-500/30";
