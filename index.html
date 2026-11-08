@@ -351,6 +351,22 @@
               <p class="text-gray-400 text-xs mt-0.5">Playing with an Xbox or PlayStation gamepad without touching the mouse? Gamepad inputs keep the PC awake seamlessly.</p>
             </div>
           </div>
+
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 text-lg">🤖</span>
+            <div>
+              <strong class="text-white">Smart AI & Local LLM Workload Shield:</strong>
+              <p class="text-gray-400 text-xs mt-0.5">Actively tracks local AI inference (<strong class="text-emerald-300">Ollama, LM Studio, ComfyUI, PyTorch, llama.cpp, Whisper</strong>) and NVIDIA CUDA compute (>15% load). Prevents CPU throttling or system sleep while generating tokens or rendering diffusion models!</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <span class="text-sky-400 text-lg">💻</span>
+            <div>
+              <strong class="text-white">Autonomous Bot & AI Agent CLI Automation:</strong>
+              <p class="text-gray-400 text-xs mt-0.5">Full headless CLI interface (<code class="text-sky-300 font-mono">--status --json</code>, <code class="text-sky-300 font-mono">--mode &lt;eco|balanced|perf&gt;</code>, <code class="text-sky-300 font-mono">--brightness &lt;0-100&gt;</code>). Allows developer bots, Discord bots, Claude Desktop, Antigravity, and AutoGPT agents to control power schemes programmatically.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -603,7 +619,7 @@
           </button>
         </div>
         <div id="hashValue" class="text-gray-300 break-all select-all font-mono text-[11px]">
-          DD2497D1FEC9BEFF8F62718A0960F9132A58245AF82C4159E29743E407D4136D
+          A2F31F1029EDA4D72F72AFCA526DA86C6EB844AC213D846E0CDB5FA25C98DE75
         </div>
       </div>
     </div>
@@ -701,33 +717,145 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-12 px-6 border-t border-white/5 text-center text-xs text-gray-500 font-mono">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center space-x-2">
-        <img src="assets/logo.png" class="w-5 h-5 object-contain" alt="Logo">
-        <span class="text-gray-300 font-bold">EcoPower Suite</span>
-        <span>• Intelligent Windows Energy Optimization</span>
+  <!-- Footer with Full International Legal, Privacy & Regulatory Compliance -->
+  <footer class="py-14 px-6 border-t border-white/5 text-xs text-gray-500 font-mono">
+    <div class="max-w-7xl mx-auto space-y-8">
+      
+      <!-- Top Row: Logo, Primary Links, Internal Console -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-white/5">
+        <div class="flex items-center space-x-3">
+          <img src="assets/logo.png" class="w-6 h-6 object-contain" alt="Logo">
+          <span class="text-gray-200 font-bold text-sm">EcoPower Suite</span>
+          <span class="text-gray-400">• Intelligent Windows Energy & Battery Optimization</span>
+        </div>
+
+        <!-- Quick Action Navigation Links -->
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-sans">
+          <a href="#security" class="text-gray-400 hover:text-emerald-400 transition-colors">Security Audit (0/72 Clean)</a>
+          <span class="text-gray-700">•</span>
+          <a href="#share" class="text-gray-400 hover:text-cyan-400 transition-colors">Share</a>
+          <span class="text-gray-700">•</span>
+          <a href="llms.txt" target="_blank" class="text-purple-400 hover:text-purple-300 font-mono text-[11px] transition-colors flex items-center gap-1">
+            <span>🤖 llms.txt (AI Docs)</span>
+          </a>
+          <span class="text-gray-700">•</span>
+          <button onclick="toggleInsightsModal(true)" class="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors flex items-center gap-1.5 cursor-pointer">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span>Product Intelligence</span>
+            <span class="text-[9px] text-gray-400 bg-gray-900 px-1.5 py-0.5 rounded border border-white/10">Internal</span>
+          </button>
+        </div>
       </div>
 
-      <!-- Quick Action Navigation Links -->
-      <div class="flex items-center space-x-4">
-        <a href="#security" class="text-gray-400 hover:text-emerald-400 transition-colors">Security Report</a>
+      <!-- Regulatory & Legal Policy Links (EU GDPR, US CCPA/ADA, Israeli IS 5568) -->
+      <div class="flex flex-wrap items-center justify-center gap-6 text-[11px] text-gray-400 font-sans">
+        <a href="terms.html" class="hover:text-white underline transition-colors">Terms of Service & EULA (Limitation of Liability)</a>
         <span>•</span>
-        <a href="#share" class="text-gray-400 hover:text-cyan-400 transition-colors">Share</a>
+        <a href="privacy.html" class="hover:text-white underline transition-colors">Privacy Policy (EU GDPR • US CCPA • חוק הגנת הפרטיות)</a>
         <span>•</span>
-        <button onclick="toggleInsightsModal(true)" class="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors flex items-center gap-1.5 cursor-pointer">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-          <span>Product Intelligence</span>
-          <span class="text-[9px] text-gray-400 bg-gray-900 px-1.5 py-0.5 rounded border border-white/10">Internal</span>
-        </button>
+        <a href="accessibility.html" class="hover:text-emerald-400 underline transition-colors flex items-center gap-1">
+          <span>♿ הצהרת נגישות (ת״י 5568 • WCAG 2.1 AA • ADA)</span>
+        </a>
+        <span>•</span>
+        <a href="privacy.html#cookies" class="hover:text-cyan-400 underline transition-colors">Cookie & Storage Notice (Zero Tracking Cookies)</a>
       </div>
 
-      <div>
-        Proprietary & Open Utility © 2026 Ziv Shabat. All Rights Reserved.
+      <!-- Statutory Limitation of Liability & Disclaimers Box ("כסת״ח מלא") -->
+      <div class="bg-gray-950/80 rounded-2xl p-5 border border-white/5 text-[10px] leading-relaxed text-gray-400 space-y-2 max-w-5xl mx-auto text-left font-mono">
+        <p class="font-bold text-gray-300 uppercase">
+          LEGAL NOTICE, WARRANTY DISCLAIMER & LIMITATION OF LIABILITY:
+        </p>
+        <p>
+          EcoPower Suite is an independent open utility provided strictly on an <strong>"AS-IS" and "AS-AVAILABLE" basis</strong> without warranty of any kind, express or implied (including under UCC §§ 2-314/2-315 and international law). All kilowatt-hour (kWh), wattage, carbon footprint (CO₂), and currency cost calculations are simulated estimates for educational and awareness purposes only. Actual electricity billing rates and hardware efficiency vary widely.
+        </p>
+        <p>
+          To the maximum extent permitted by applicable law in the United States, European Union, and Israel, the author, contributors, and distributors disclaim all liability for any direct, indirect, incidental, or consequential damages, including but not limited to hardware malfunction, display flicker, CPU thermal throttling, lost data, system shutdowns, or utility bill discrepancies. Use of power plans and DDC/CI monitor dimming is at the user's sole risk and discretion.
+        </p>
+        <p class="text-gray-400">
+          Governed exclusively by the laws of the State of Israel (exclusive jurisdiction in Tel Aviv-Jaffa). Windows, Intel, AMD, NVIDIA, Qualcomm, Xbox, PlayStation, and other marks are registered trademarks of their respective owners. EcoPower Suite is an independent utility not affiliated with or endorsed by Microsoft Corporation.
+        </p>
       </div>
+
+      <!-- Copyright -->
+      <div class="text-center text-gray-400 pt-2">
+        Proprietary & Open Digital Utility © 2026 Ziv Shabat. All Rights Reserved. Built with strict user privacy and zero data exfiltration.
+      </div>
+
     </div>
   </footer>
+
+  <!-- Floating Accessibility Toolbar Widget (ת״י 5568 / WCAG 2.1 AA / ADA) -->
+  <div id="a11yContainer" class="fixed bottom-6 left-6 z-50 font-sans">
+    <!-- Trigger Button -->
+    <button onclick="toggleA11yMenu()" id="btnA11yToggle" aria-label="Open Accessibility Menu / הצהרת נגישות" class="w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black shadow-2xl flex items-center justify-center text-2xl transition-all transform hover:scale-110 active:scale-95 border-2 border-white/20 cursor-pointer">
+      <span aria-hidden="true">♿</span>
+    </button>
+
+    <!-- Accessibility Flyout Menu -->
+    <div id="a11yMenu" class="hidden absolute bottom-14 left-0 w-72 glass-panel bg-gray-950/95 border border-emerald-500/40 rounded-2xl p-4 shadow-2xl space-y-3 text-xs text-left">
+      <div class="flex items-center justify-between border-b border-white/10 pb-2">
+        <span class="font-bold text-white flex items-center gap-1.5">
+          <span>♿</span> תפריט נגישות (Accessibility)
+        </span>
+        <button onclick="toggleA11yMenu()" class="text-gray-400 hover:text-white text-xs cursor-pointer">✕</button>
+      </div>
+
+      <!-- Text Size Controls -->
+      <div>
+        <label class="text-[11px] text-gray-300 block mb-1">גודל טקסט (Font Size):</label>
+        <div class="grid grid-cols-3 gap-1.5">
+          <button onclick="changeFontSize('small')" class="py-1 px-2 rounded bg-gray-800 hover:bg-gray-700 text-gray-200 text-center font-bold">A-</button>
+          <button onclick="changeFontSize('reset')" class="py-1 px-2 rounded bg-gray-800 hover:bg-gray-700 text-gray-200 text-center">רגיל</button>
+          <button onclick="changeFontSize('large')" class="py-1 px-2 rounded bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold">A+</button>
+        </div>
+      </div>
+
+      <!-- High Contrast Toggle -->
+      <button onclick="toggleHighContrast()" id="btnHighContrast" class="w-full py-2 px-3 rounded-xl bg-gray-900 hover:bg-gray-800 border border-white/10 text-gray-200 flex items-center justify-between cursor-pointer">
+        <span>🌓 ניגודיות גבוהה (Contrast)</span>
+        <span id="lblContrastStatus" class="text-[10px] text-gray-400">כבוי</span>
+      </button>
+
+      <!-- Highlight Links Toggle -->
+      <button onclick="toggleHighlightLinks()" id="btnHighlightLinks" class="w-full py-2 px-3 rounded-xl bg-gray-900 hover:bg-gray-800 border border-white/10 text-gray-200 flex items-center justify-between cursor-pointer">
+        <span>🔗 הדגשת קישורים (Links)</span>
+        <span id="lblLinksStatus" class="text-[10px] text-gray-400">כבוי</span>
+      </button>
+
+      <!-- Pause Animations -->
+      <button onclick="toggleAnimations()" id="btnAnimations" class="w-full py-2 px-3 rounded-xl bg-gray-900 hover:bg-gray-800 border border-white/10 text-gray-200 flex items-center justify-between cursor-pointer">
+        <span>⏸️ עצירת תנועה (Pause Motion)</span>
+        <span id="lblAnimStatus" class="text-[10px] text-gray-400">כבוי</span>
+      </button>
+
+      <!-- Full Statement Link -->
+      <div class="border-t border-white/10 pt-2 text-center">
+        <a href="accessibility.html" class="text-[11px] text-emerald-400 hover:text-emerald-300 underline font-semibold">
+          הצהרת נגישות מפורטת לפי ת״י 5568 &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Non-Intrusive Privacy & Storage Notice Bar (GDPR / CCPA / Israel Law) -->
+  <div id="privacyNoticePill" class="fixed bottom-6 right-6 z-40 max-w-md glass-panel bg-gray-950/95 border border-cyan-500/30 rounded-2xl p-4 shadow-2xl text-xs flex flex-col gap-2 font-sans">
+    <div class="flex items-start justify-between gap-2">
+      <div class="flex items-center gap-1.5 text-cyan-400 font-bold">
+        <span>🔒</span>
+        <span>Zero-Cookie Privacy Transparency</span>
+      </div>
+      <button onclick="dismissPrivacyNotice()" class="text-gray-400 hover:text-white text-xs cursor-pointer">✕</button>
+    </div>
+    <p class="text-[11px] text-gray-300 leading-relaxed">
+      This site uses <strong>zero third-party tracking cookies</strong>. Strictly functional local storage (<code class="text-cyan-300 font-mono">localStorage</code>) is used to preserve preferences and anonymous aggregated metrics in full compliance with EU GDPR, US CCPA, and Israeli Privacy Law 5741-1981.
+    </p>
+    <div class="flex items-center justify-between pt-1 text-[11px]">
+      <a href="privacy.html" class="text-cyan-400 hover:text-cyan-300 underline">Read Privacy Policy</a>
+      <button onclick="dismissPrivacyNotice()" class="px-3 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-bold cursor-pointer">
+        Accept & Close
+      </button>
+    </div>
+  </div>
 
   <!-- Internal Product Intelligence & Telemetry Console Modal -->
   <div id="insightsModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 overflow-y-auto">
@@ -1296,6 +1424,83 @@
         URL.revokeObjectURL(url);
       }
     };
+
+    // Accessibility Toolbar Interactive Functions (IS 5568 / WCAG 2.1 AA / ADA)
+    function toggleA11yMenu() {
+      const m = document.getElementById('a11yMenu');
+      if (m) m.classList.toggle('hidden');
+    }
+
+    let currentFontScale = 100;
+    function changeFontSize(action) {
+      if (action === 'large') currentFontScale = Math.min(130, currentFontScale + 10);
+      else if (action === 'small') currentFontScale = Math.max(90, currentFontScale - 10);
+      else currentFontScale = 100;
+      document.documentElement.style.fontSize = `${currentFontScale}%`;
+      try { localStorage.setItem('eco_a11y_scale', currentFontScale); } catch {}
+    }
+
+    let isHighContrast = false;
+    function toggleHighContrast() {
+      isHighContrast = !isHighContrast;
+      if (isHighContrast) {
+        document.documentElement.style.filter = "contrast(140%) brightness(110%)";
+      } else {
+        document.documentElement.style.filter = "";
+      }
+      const lbl = document.getElementById('lblContrastStatus');
+      if (lbl) lbl.textContent = isHighContrast ? "פעיל" : "כבוי";
+    }
+
+    let isLinksHighlighted = false;
+    function toggleHighlightLinks() {
+      isLinksHighlighted = !isLinksHighlighted;
+      document.querySelectorAll('a').forEach(a => {
+        if (isLinksHighlighted) {
+          a.classList.add('outline', 'outline-2', 'outline-cyan-400');
+        } else {
+          a.classList.remove('outline', 'outline-2', 'outline-cyan-400');
+        }
+      });
+      const lbl = document.getElementById('lblLinksStatus');
+      if (lbl) lbl.textContent = isLinksHighlighted ? "פעיל" : "כבוי";
+    }
+
+    let isAnimPaused = false;
+    function toggleAnimations() {
+      isAnimPaused = !isAnimPaused;
+      if (isAnimPaused) {
+        const style = document.createElement('style');
+        style.id = 'pause-anim-style';
+        style.innerHTML = "* { animation: none !important; transition: none !important; }";
+        document.head.appendChild(style);
+      } else {
+        const s = document.getElementById('pause-anim-style');
+        if (s) s.remove();
+      }
+      const lbl = document.getElementById('lblAnimStatus');
+      if (lbl) lbl.textContent = isAnimPaused ? "פעיל" : "כבוי";
+    }
+
+    // Dismiss Privacy & Cookie Notice Pill
+    function dismissPrivacyNotice() {
+      const pill = document.getElementById('privacyNoticePill');
+      if (pill) pill.classList.add('hidden');
+      try { localStorage.setItem('eco_privacy_notice_dismissed', 'true'); } catch {}
+    }
+
+    if (localStorage.getItem('eco_privacy_notice_dismissed') === 'true') {
+      const pill = document.getElementById('privacyNoticePill');
+      if (pill) pill.classList.add('hidden');
+    }
+
+    // Restore Font Scale if previously set
+    try {
+      const savedScale = localStorage.getItem('eco_a11y_scale');
+      if (savedScale && parseInt(savedScale) !== 100) {
+        changeFontSize(parseInt(savedScale) > 100 ? 'large' : 'small');
+      }
+    } catch {}
 
     // Initialize telemetry & calculation on page load
     calculateSavings();
