@@ -1,77 +1,73 @@
 # 🌿 EcoPower Suite — Official Website & Release Portal
 
-Welcome to the official public repository for **EcoPower Suite** — the intelligent Windows desktop utility for hardware energy optimization, power scheme management, DDC/CI monitor dimming, AI/bot workload protection, and battery life maximization.
+Official public repository for **EcoPower Suite** — the intelligent Windows desktop utility for hardware energy optimization, power-scheme management, DDC/CI monitor dimming, AI/bot workload protection and battery-life maximization.
 
-🌐 **Live Marketing Website**: [https://bambadooma-star.github.io/ecopower-suite-app/](https://bambadooma-star.github.io/ecopower-suite-app/)  
-📦 **GitHub Release**: [v1.0.0 Release](https://github.com/bambadooma-star/ecopower-suite-app/releases/tag/v1.0.0)  
-🤖 **AI Documentation**: [llms.txt](https://bambadooma-star.github.io/ecopower-suite-app/llms.txt)
+🌐 **Website**: <https://bambadooma-star.github.io/ecopower-suite-app/>  
+📦 **Latest release**: [v1.1.0](https://github.com/bambadooma-star/ecopower-suite-app/releases/tag/v1.1.0)  
+🤖 **AI documentation**: [llms.txt](https://bambadooma-star.github.io/ecopower-suite-app/llms.txt)
 
 ---
 
-## ⚡ Direct Download
-- **Executable**: [EcoPowerSuite.exe (v1.0.1)](https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.0.1/EcoPowerSuite.exe)
-- **Direct Mirror**: [downloads/EcoPowerSuite.exe](https://bambadooma-star.github.io/ecopower-suite-app/downloads/EcoPowerSuite.exe)
-- **Binary Size**: ~20.7 MB (Zero external dependencies)
-- **Platform**: Windows 10 & 11 (64-bit x86_64)
-- **SHA-256 Checksum**: `7399128893537D22194288A68DFF3FAB10B3B8BA4A6D68ADFD87B19F4491FA7C`
+## ⚡ Download
+- **Executable**: [EcoPowerSuite.exe (v1.1.0)](https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.0/EcoPowerSuite.exe)
+- **Direct mirror**: [downloads/EcoPowerSuite.exe](https://bambadooma-star.github.io/ecopower-suite-app/downloads/EcoPowerSuite.exe)
+- **Size**: 22.2 MB (single file, no installer)
+- **Platform**: Windows 10 & 11 (64-bit, x86_64)
+- **Release date**: 2026-11-11
+- **SHA-256**: `805A056D580FDACC3A8A9B457F5FD3088C79871735EB0F8510E572201B84033D`
 
-### 🔑 Cryptographic Verification (PowerShell)
-You can verify the downloaded binary directly in Windows PowerShell:
+### 🔑 Verify the download (PowerShell)
 ```powershell
 Get-FileHash .\EcoPowerSuite.exe -Algorithm SHA256
 ```
-Ensure the hash output matches:
-`7399128893537D22194288A68DFF3FAB10B3B8BA4A6D68ADFD87B19F4491FA7C`
+The output must match the SHA-256 above. You can also look the hash up on VirusTotal:
+<https://www.virustotal.com/gui/file/805A056D580FDACC3A8A9B457F5FD3088C79871735EB0F8510E572201B84033D> (or upload the file at <https://www.virustotal.com/gui/home/upload>) and review the engines' verdicts yourself.
+
+---
+
+## ✨ What's new in v1.1.0
+- Redesigned dashboard with sidebar navigation and a live power gauge.
+- Smoother, faster UI — background commands no longer block the window.
+- Non-blocking brightness control with correct DDC/CI range scaling.
+- **Fixes**: brightness no longer reset to 100% on launch · electricity tariff setting now applies · true year-to-date savings · shutdown snooze really reschedules · CLI `--status` detects Eco correctly · laptop brightness via CLI works.
+- Safer in-app updater (integrity checks) and an **opt-in** automatic update check (off by default).
 
 ---
 
 ## 🤖 AI & Bot Workload Support
-EcoPower Suite is built from the ground up to support modern AI workloads, local LLMs, and autonomous bots:
-
-1. **Smart AI Workload Shield**:
-   - Detects local AI engines (**Ollama, LM Studio, ComfyUI, PyTorch, llama.cpp, Whisper**) and NVIDIA CUDA GPU compute (>15% load).
-   - Automatically prevents CPU multiplier throttling (capping) and blocks Windows idle sleep during active model generation or diffusion rendering.
-2. **Autonomous AI Agent & Developer Bot CLI Interface**:
-   - Native headless CLI with structured JSON output for AI agents (Claude Desktop, Antigravity, AutoGPT, LangChain) and automated scripts:
-     ```bash
-     # Query real-time power metrics, brightness, battery and shield status
-     EcoPowerSuite.exe --status --json
-
-     # Change power mode in one-shot
-     EcoPowerSuite.exe --mode <eco|balanced|perf> --json
-
-     # Adjust display backlight directly
-     EcoPowerSuite.exe --brightness <0-100> --json
-
-     # Query AI & bot workload shield status
-     EcoPowerSuite.exe --ai-shield --json
-     ```
+1. **Smart AI Workload Shield** — detects local AI engines (**Ollama, LM Studio, ComfyUI, llama.cpp, Whisper**) and NVIDIA CUDA compute (>15% load); prevents idle sleep and CPU capping during active generation or rendering.
+2. **Headless CLI with structured JSON output** for scripts and AI agents:
+   ```bash
+   EcoPowerSuite.exe --status --json                    # power, brightness, battery, shield status
+   EcoPowerSuite.exe --mode <eco|balanced|perf> --json  # one-shot power mode
+   EcoPowerSuite.exe --brightness <0-100> --json        # backlight (DDC/CI + WMI)
+   EcoPowerSuite.exe --ai-shield --json                 # AI & bot workload detection
+   EcoPowerSuite.exe --check-update --json              # check GitHub for a newer release
+   ```
 
 ---
 
-## 🛡️ Security, Privacy & Verified Antivirus Report
-- **0/72 Clean (Antivirus Verified)**: Scanned clean across Microsoft Defender, Kaspersky, Bitdefender, Malwarebytes, Sophos, CrowdStrike. 100% free of adware, trojans, miners, or spyware.
-  - 🔗 **Public Proof Report**: [View Live VirusTotal Scan Result (SHA-256 Verified)](https://www.virustotal.com/gui/file/a2f31f1029eda4d72f72afca526da86c6eb844ac213d846e0cdb5fa25c98de75)
-- **Strict Offline Privacy Guarantee (Zero Telemetry)**: Works **100% offline**. Zero network connections, zero tracking pixels, zero analytics phoning home. Operates exclusively through local Windows Win32 APIs.
-- **Non-Destructive One-Shot Architecture**: Never modifies core system files or installs kernel drivers. Applies adjustments as polite events.
-- **Windows SmartScreen Guidance**: If Windows displays an *"Unknown Publisher / Windows protected your PC"* prompt: click **More info** &rarr; click **Run anyway**. Check the SHA-256 hash above for guaranteed binary integrity.
+## 🛡️ Security & Privacy
+- **Verify it yourself**: published SHA-256 checksum and a VirusTotal hash-lookup/upload link — don't take our word for it.
+- **No telemetry, no accounts, no ads.** Power control runs through local Windows APIs. The only network activity is an **optional, user-initiated update check and download from GitHub** (`api.github.com` / `github.com` releases): when you click *Check for updates*, or if you opt in to the automatic check (off by default in v1.1.0).
+- **Non-destructive**: no kernel drivers, no permanent system modifications. *Exit & Restore* returns the power plan to Balanced; remove the app by deleting the single file.
+- **Windows SmartScreen**: for a new, unsigned free utility Windows may show *Unknown publisher*. Click **More info → Run anyway** after confirming the SHA-256 matches.
 
 ---
 
-## ⚖️ Legal Disclaimers, Limitation of Liability & Compliance
-EcoPower Suite complies with international regulatory standards:
-
-- **Strict "AS-IS" Warranty Disclaimer**: Provided strictly "AS-IS" without warranties of any kind, express or implied (under UCC §§ 2-314/2-315 and international law).
-- **Limitation of Liability**: To the maximum extent permitted by law, author and contributors disclaim all liability for any direct, indirect, incidental, or consequential damages (including hardware degradation, display issues, or utility bill discrepancies). Energy calculations are educational simulations.
-- **EU GDPR Compliance (Regulation 2016/679)**: 100% offline software with zero personal data collection. Strictly functional local storage only.
-- **US CCPA / CPRA & ADA Title III**: Zero personal data sold or shared. WCAG 2.1 AA accessible web interface.
-- **Israeli Law Compliance**: Full compliance with the Israeli Privacy Protection Law (5741-1981) and Israeli Standard IS 5568 Level AA (ת״י 5568) for web accessibility.
-- **Legal Documents**:
-  - [Terms of Service & EULA (Limitation of Liability)](https://bambadooma-star.github.io/ecopower-suite-app/terms.html)
+## ⚖️ Legal, Privacy & Accessibility
+- **"AS-IS" warranty disclaimer & limitation of liability.** Energy, CO₂ and currency figures are simulated estimates.
+- **Privacy**: no cookies, no trackers; local-first. EU GDPR, US CCPA/CPRA and the Israeli Privacy Protection Law (5741-1981) addressed.
+- **Accessibility**: Israeli Standard IS 5568 (Level AA) and WCAG 2.1 AA targeted.
+- Documents:
+  - [Terms of Service & EULA](https://bambadooma-star.github.io/ecopower-suite-app/terms.html)
   - [Privacy Policy](https://bambadooma-star.github.io/ecopower-suite-app/privacy.html)
-  - [Accessibility Statement (הצהרת נגישות)](https://bambadooma-star.github.io/ecopower-suite-app/accessibility.html)
+  - [הצהרת נגישות (Accessibility Statement)](https://bambadooma-star.github.io/ecopower-suite-app/accessibility.html)
 
 ---
 
-## 📄 License & Proprietary Rights
-Proprietary Commercial Software © 2026 Ziv Shabat. All Rights Reserved. Unauthorized copying, distribution, modification, decompilation, or reverse engineering of this software binary and website is strictly prohibited.
+## 🌐 About this site
+Static site with no build step and no third-party scripts or fonts: `index.html`, `terms.html`, `privacy.html`, `accessibility.html`, shared `assets/site.css`, `assets/common.js`, `assets/index.js` and an SVG icon sprite. Dark-first with a light theme; English/Hebrew (RTL) on the home page.
+
+## 📄 License
+Free to use, proprietary closed-source software © 2026 Ziv Shabat. All rights reserved. Unauthorized copying, redistribution of modified binaries, decompilation or reverse engineering is prohibited. Supported by voluntary donations.

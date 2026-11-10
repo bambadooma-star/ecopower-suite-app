@@ -1,180 +1,122 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service & EULA | EcoPower Suite</title>
-  <meta name="description" content="Terms of Service, End-User License Agreement (EULA), Warranty Disclaimers, and Limitation of Liability for EcoPower Suite.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service &amp; EULA | EcoPower Suite</title>
+  <meta name="description" content="Terms of Service, End-User License Agreement (EULA), warranty disclaimers and limitation of liability for EcoPower Suite.">
+  <meta name="theme-color" content="#070b14">
+  <link rel="canonical" href="https://bambadooma-star.github.io/ecopower-suite-app/terms.html">
   <link rel="icon" type="image/x-icon" href="assets/icon.ico">
-  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              black: '#07090e',
-              dark: '#0c1017',
-              card: '#131b2c',
-              border: 'rgba(255, 255, 255, 0.08)',
-              emerald: '#10b981',
-              cyan: '#06b6d4',
-            }
-          }
-        }
-      }
-    }
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('eco_theme');
+        if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        d.setAttribute('data-theme', t);
+        var a = JSON.parse(localStorage.getItem('eco_a11y') || '{}');
+        if (a.scale) d.style.fontSize = a.scale + '%';
+      } catch (e) { /* storage blocked */ }
+    })();
   </script>
-  <style>
-    body { background-color: #07090e; color: #cbd5e1; }
-    .glass-panel {
-      background: rgba(19, 27, 44, 0.65);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-  </style>
+  <link rel="stylesheet" href="assets/site.css">
 </head>
-<body class="min-h-screen relative py-12 px-6 selection:bg-emerald-500 selection:text-black">
-
-  <div class="max-w-4xl mx-auto">
-    <!-- Top Back Navigation -->
-    <div class="mb-8 flex items-center justify-between border-b border-white/10 pb-4">
-      <a href="index.html" class="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 font-semibold transition-colors">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-        <span>Back to EcoPower Suite</span>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-in">
+      <a href="index.html" class="brand" aria-label="EcoPower Suite">
+        <img src="assets/logo-96.png" alt="" width="38" height="38">
+        <span><span class="brand-name">EcoPower <b>Suite</b></span><span class="brand-sub">v1.1.0</span></span>
       </a>
-      <span class="text-xs font-mono text-gray-500">Last Revised: November 2026</span>
+      <div class="header-actions">
+        <a class="btn btn-sm" href="index.html"><svg class="i" aria-hidden="true" style="transform:scaleX(-1)"><use href="assets/icons.svg#i-arrow"/></svg><span>Back to EcoPower Suite</span></a>
+        <button type="button" class="btn btn-icon" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-sun"/></svg></button>
+      </div>
     </div>
-
-    <!-- Header -->
-    <div class="mb-10 text-center sm:text-left">
-      <span class="text-xs uppercase font-mono font-bold tracking-widest text-emerald-400">LEGAL AGREEMENT & DISCLAIMERS</span>
-      <h1 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 mb-4">Terms of Service & End-User License Agreement (EULA)</h1>
-      <p class="text-sm sm:text-base text-gray-400 leading-relaxed">
-        Please read these Terms of Service carefully before downloading, installing, accessing, or using the <strong>EcoPower Suite</strong> application or website. By downloading, running, or accessing any part of the software, you unconditionally agree to be bound by the terms and limitation of liability set forth below.
-      </p>
+  </header>
+  <main id="main" class="doc-wrap">
+    <div class="doc-head">
+      <span class="eyebrow">Legal agreement &amp; disclaimers</span>
+      <h1>Terms of Service &amp; End-User License Agreement (EULA)</h1>
+      <p>Please read these Terms carefully before downloading, installing or using the <strong>EcoPower Suite</strong> application or website. By downloading, running or accessing any part of the software you agree to be bound by these terms and the limitation of liability below.</p>
+      <p class="doc-meta" style="margin-top:.8rem">Last revised: November 2026 · Applies to v1.1.0</p>
     </div>
+    <nav class="doc-toc" aria-label="Sections"><a href="#accept">1. Acceptance of Terms</a><a href="#license">2. License Grant</a><a href="#asis">3. Strict "AS-IS"</a><a href="#liability">4. Comprehensive Limitation of Liab</a><a href="#estimates">5. Energy Calculations</a><a href="#risk">6. User Assumption of Risk</a><a href="#updates">7. Updates</a><a href="#trademarks">8. Third-Party Trademarks</a><a href="#law">9. Governing Law</a><a href="#severability">10. Severability</a></nav>
+    <section class="doc-sec" id="accept">
+      <h2>1. Acceptance of Terms &amp; Eligibility</h2>
+      <p>This Agreement is a legally binding contract between you ("User", "you") and the creator, author and maintainers of EcoPower Suite ("we", "us", "Licensor"). If you do not agree to every provision, you must not download, execute or use the software or website.</p>
+      <p>You represent that you are of legal age in your jurisdiction to form a binding agreement, or that you have obtained the consent of a parent or legal guardian.</p>
+    </section>
+    <section class="doc-sec" id="license">
+      <h2>2. License Grant &amp; Scope of Use</h2>
+      <p>Subject to full compliance with these Terms, Licensor grants you a non-exclusive, non-transferable, revocable, royalty-free personal license to download, install and run the standalone EcoPower Suite executable on computers you own or are legally authorized to manage. The software is free to use; it is proprietary, closed-source software and is not offered under an open-source license.</p>
+      <p>You may not reverse-engineer for malicious purposes, modify the software to bypass security checks, repackage it with spyware or adware, or redistribute modified variants while falsely claiming official endorsement.</p>
+    </section>
+    <section class="doc-sec" id="asis">
+      <h2>3. Strict "AS-IS" &amp; Warranty Disclaimer (UCC &amp; International)</h2>
+      <div class="doc-note warn caps">
+        <p>THE ECOPOWER SUITE SOFTWARE, ITS WEBSITE, DOCUMENTATION AND ALL ASSOCIATED MATERIALS ARE PROVIDED ON A STRICT "AS-IS" AND "AS-AVAILABLE" BASIS, WITH ALL FAULTS, DEFECTS AND ERRORS, AND WITHOUT WARRANTY OF ANY KIND.</p>
+        <p>TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE UNITED STATES (INCLUDING UCC §§ 2-314 &amp; 2-315), EUROPEAN UNION AND ISRAELI LAWS, LICENSOR EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER STATUTORY, EXPRESS, IMPLIED OR ARISING BY COURSE OF DEALING, INCLUDING BUT NOT LIMITED TO: (A) WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR SATISFACTORY QUALITY; (B) WARRANTIES OF TITLE, NON-INFRINGEMENT, OR COMPATIBILITY WITH ANY HARDWARE, BIOS/UEFI, OPERATING SYSTEM, DRIVER OR MONITOR; (C) WARRANTIES THAT THE SOFTWARE WILL OPERATE UNINTERRUPTED, BUG-FREE, SECURELY OR ERROR-FREE.</p>
+        <p>YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT YOU USE THIS SOFTWARE ENTIRELY AT YOUR OWN INDEPENDENT RISK.</p>
+      </div>
+    </section>
+    <section class="doc-sec" id="liability">
+      <h2>4. Comprehensive Limitation of Liability (כסת״ח)</h2>
+      <div class="doc-note warn caps">
+        <p>IN NO EVENT AND UNDER NO LEGAL THEORY (WHETHER IN CONTRACT, TORT, STRICT LIABILITY, NEGLIGENCE, STATUTE OR OTHERWISE) SHALL LICENSOR, AUTHOR, CONTRIBUTORS, AFFILIATES OR DISTRIBUTORS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, EXEMPLARY OR PUNITIVE DAMAGES OF ANY KIND, INCLUDING BUT NOT LIMITED TO:</p>
+        <ul>
+          <li>Any hardware damage, monitor display degradation, backlight failure, DDC/CI communication lockups or screen flicker.</li>
+          <li>CPU or GPU thermal throttling, overheating, silicon degradation, frequency-governor instability or system shutdowns.</li>
+          <li>Loss of unsaved documents, game progress, media rendering jobs, background AI inference jobs or data corruption.</li>
+          <li>Laptop battery capacity degradation, unexpected battery drain or AC adapter power transitions.</li>
+          <li>Discrepancies in calculated kilowatt-hour (kWh) metrics, local utility tariffs or monetary energy savings.</li>
+          <li>Any system crash (including blue screens), Modern Standby sleep issues or Windows Task Scheduler execution failures.</li>
+        </ul>
+        <p>IN ALL CIRCUMSTANCES, LICENSOR'S AGGREGATE TOTAL LIABILITY ARISING OUT OF OR IN CONNECTION WITH THE SOFTWARE OR WEBSITE SHALL NOT EXCEED THE TOTAL AMOUNT PAID BY YOU FOR THE SOFTWARE (WHICH IS ZERO DOLLARS / $0.00 USD / ₪0.00 ILS). VOLUNTARY DONATIONS ARE GIFTS AND DO NOT PURCHASE A WARRANTY OR SERVICE.</p>
+      </div>
+    </section>
+    <section class="doc-sec" id="estimates">
+      <h2>5. Energy Calculations &amp; Financial Estimates Disclaimer</h2>
+      <p>All kilowatt-hour (kWh) figures, currency savings (ILS ₪, USD $, EUR €), wattage numbers, carbon-footprint reductions (kg CO₂) and tree-absorption equivalents shown on the website or in the application are <strong>simulated estimates for informational, educational and awareness purposes only</strong>.</p>
+      <p>Actual electrical consumption depends on silicon binning, monitor panel efficiency, room temperature, ambient brightness, power-supply efficiency and your utility's billing rates. Licensor makes no promise, guarantee or representation that your electricity bill will decrease by any specific amount.</p>
+    </section>
+    <section class="doc-sec" id="risk">
+      <h2>6. User Assumption of Risk &amp; Hardware Power Control</h2>
+      <p>The software interacts with Windows power plans (<code>powercfg</code>), VESA DDC/CI monitor communication (<code>dxva2.dll</code>) and laptop brightness (<code>WMI</code>). You acknowledge that changing CPU limits, monitor backlights or PCIe ASPM link states carries inherent risks on uncertified hardware.</p>
+      <p>You are solely responsible for adequate PC cooling and airflow and for backing up important files before enabling aggressive power profiles or automated shutdown timers.</p>
+    </section>
+    <section class="doc-sec" id="updates">
+      <h2>7. Updates &amp; Network Use</h2>
+      <p>The application can optionally check for, download and install newer versions from the official GitHub releases of the project. This happens only when you click <em>Check for updates</em> or, in v1.1.0 and later, if you opt in to the automatic check (off by default). Verify the SHA-256 checksum published on the website before running any downloaded binary. See the <a href="privacy.html">Privacy Policy</a> for what GitHub receives.</p>
+    </section>
+    <section class="doc-sec" id="trademarks">
+      <h2>8. Third-Party Trademarks &amp; Independence</h2>
+      <p>Windows, Microsoft Defender, Intel, AMD, NVIDIA, Qualcomm Snapdragon, Xbox, PlayStation, VirusTotal, WhatsApp, LinkedIn, X (Twitter), Reddit and Facebook are trademarks of their respective owners. EcoPower Suite is an independent utility and is not affiliated with, endorsed, sponsored or certified by Microsoft Corporation or any hardware manufacturer.</p>
+    </section>
+    <section class="doc-sec" id="law">
+      <h2>9. Governing Law &amp; Exclusive Jurisdiction</h2>
+      <p>This Agreement and any dispute arising from or related to the software or website are governed by the substantive laws of the <strong>State of Israel</strong>, without regard to conflict-of-law principles.</p>
+      <p>You submit to the sole and exclusive jurisdiction of the competent courts of <strong>Tel Aviv-Jaffa, Israel</strong>. For users in the United States or European Union, statutory consumer-protection rights that cannot be waived by contract remain intact to the minimum extent required by mandatory local law.</p>
+    </section>
+    <section class="doc-sec" id="severability">
+      <h2>10. Severability &amp; Entire Agreement</h2>
+      <p>If any provision is held invalid or unenforceable, it will be severed or modified to the minimum extent necessary and the remaining provisions continue in full force. This Agreement is the entire agreement between you and Licensor regarding the software.</p>
+    </section>
 
-    <!-- Main Content Panels -->
-    <div class="space-y-8 text-sm leading-relaxed text-gray-300">
-
-      <!-- Section 1: Acceptance -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">1. Acceptance of Terms & Eligibility</h2>
-        <p class="mb-3">
-          This Agreement constitutes a legally binding contract between you ("User", "you", or "your") and the creator, author, and maintainers of EcoPower Suite ("we", "us", "our", or "Licensor"). If you do not agree to every provision of this Agreement, you must not download, execute, or utilize the software or website.
-        </p>
-        <p>
-          You represent and warrant that you are of legal age in your jurisdiction to form a binding agreement, or have obtained explicit parental or legal guardian consent.
-        </p>
-      </section>
-
-      <!-- Section 2: License Grant -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">2. License Grant & Scope of Use</h2>
-        <p class="mb-3">
-          Subject to full compliance with these Terms, Licensor grants you a non-exclusive, non-transferable, revocable, royalty-free personal license to download, install, and execute the standalone EcoPower Suite executable on computers you own or are legally authorized to manage.
-        </p>
-        <p>
-          You may not reverse-engineer for malicious purposes, modify to bypass security checks, repackage with spyware or adware, or redistribute commercial closed-source variants falsely claiming official endorsement.
-        </p>
-      </section>
-
-      <!-- Section 3: STRICT AS-IS DISCLAIMER (CAPS) -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8 border-l-4 border-l-red-500 bg-red-950/10">
-        <h2 class="text-lg font-bold text-red-400 mb-3 uppercase tracking-wide">3. Strict "AS-IS" & Warranty Disclaimer (UCC & International)</h2>
-        <div class="text-xs sm:text-sm font-mono text-gray-200 uppercase leading-relaxed space-y-3">
-          <p>
-            THE ECOPOWER SUITE SOFTWARE, ITS WEBSITE, DOCUMENTATION, AND ALL ASSOCIATED MATERIALS ARE PROVIDED ON AN STRICT "AS-IS" AND "AS-AVAILABLE" BASIS, WITH ALL FAULTS, DEFECTS, AND ERRORS, AND WITHOUT WARRANTY OF ANY KIND.
-          </p>
-          <p>
-            TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE UNITED STATES (INCLUDING UCC §§ 2-314 & 2-315), EUROPEAN UNION, AND ISRAELI LAWS, LICENSOR EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER STATUTORY, EXPRESS, IMPLIED, OR ARISING BY COURSE OF DEALING, INCLUDING BUT NOT LIMITED TO: (A) WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR SATISFACTORY QUALITY; (B) WARRANTIES OF TITLE, NON-INFRINGEMENT, OR COMPATIBILITY WITH ANY HARDWARE, BIOS/UEFI, OPERATING SYSTEM, DRIVER, OR MONITOR; (C) WARRANTIES THAT THE SOFTWARE WILL OPERATE UNINTERRUPTED, BUG-FREE, SECURELY, OR ERROR-FREE.
-          </p>
-          <p>
-            YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT YOU ARE USING THIS SOFTWARE ENTIRELY AT YOUR OWN INDEPENDENT RISK.
-          </p>
-        </div>
-      </section>
-
-      <!-- Section 4: COMPREHENSIVE LIMITATION OF LIABILITY -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8 border-l-4 border-l-amber-500 bg-amber-950/10">
-        <h2 class="text-lg font-bold text-amber-400 mb-3 uppercase tracking-wide">4. Comprehensive Limitation of Liability ("כסת״ח מוחלט")</h2>
-        <div class="text-xs sm:text-sm font-mono text-gray-200 uppercase leading-relaxed space-y-3">
-          <p>
-            IN NO EVENT AND UNDER NO LEGAL THEORY (WHETHER IN CONTRACT, TORT, STRICT LIABILITY, NEGLIGENCE, STATUTE, OR OTHERWISE) SHALL LICENSOR, AUTHOR, CONTRIBUTORS, AFFILIATES, OR DISTRIBUTORS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES OF ANY KIND, INCLUDING BUT NOT LIMITED TO:
-          </p>
-          <ul class="list-disc pl-5 space-y-1.5 normal-case font-sans text-xs text-gray-300">
-            <li>Any hardware damage, monitor display degradation, backlight burnout, DDC/CI communication lockups, or screen flicker.</li>
-            <li>CPU or GPU thermal throttling, overheating, silicon degradation, frequency governor instability, or system shutdowns.</li>
-            <li>Loss of unsaved documents, game progress, media rendering jobs, background AI inference scripts, or data corruption.</li>
-            <li>Laptop battery capacity degradation, unexpected battery drain, or AC adapter power transitions.</li>
-            <li>Discrepancies in calculated kilowatt-hour (kWh) electricity metrics, local utility tariffs, or monetary energy savings.</li>
-            <li>Any system crashes (Blue Screens of Death - BSOD), Modern Standby sleep issues, or Windows Task Scheduler execution failures.</li>
-          </ul>
-          <p class="pt-2">
-            IN ALL CIRCUMSTANCES, LICENSOR’S AGGREGATE TOTAL LIABILITY ARISING OUT OF OR IN CONNECTION WITH THE SOFTWARE OR WEBSITE SHALL NOT EXCEED THE TOTAL AMOUNT PAID BY YOU FOR THE SOFTWARE (WHICH IS ZERO DOLLARS / $0.00 USD / ₪0.00 ILS).
-          </p>
-        </div>
-      </section>
-
-      <!-- Section 5: Energy Estimates & Simulation Disclaimer -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">5. Energy Calculations & Financial Estimates Disclaimer</h2>
-        <p class="mb-3">
-          All kilowatt-hour (kWh), currency cost savings (ILS ₪, USD $, EUR €), wattage numbers, carbon footprint reduction (kg CO₂), and tree absorption equivalents displayed on the website or within the application are <strong>simulated estimates for informational, educational, and awareness purposes only</strong>.
-        </p>
-        <p>
-          Actual real-world electrical consumption depends on specific silicon binning, monitor panel efficiency, room temperature, ambient brightness, power supply efficiency (80 Plus rating), and dynamic utility company billing rates. Licensor makes no promise, guarantee, or representation that your personal utility bill will decrease by any specific monetary sum.
-        </p>
-      </section>
-
-      <!-- Section 6: User Assumption of Risk -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">6. User Assumption of Risk & Hardware Power Control</h2>
-        <p class="mb-3">
-          The software interacts with Windows power plans (<code class="text-cyan-400">powercfg</code>), VESA DDC/CI monitor communication (<code class="text-cyan-400">dxva2.dll</code>), and laptop brightness (<code class="text-cyan-400">WMI</code>). You acknowledge that adjusting hardware frequencies, monitor backlights, or PCIe ASPM link states carries inherent risks in uncertified hardware environments.
-        </p>
-        <p>
-          You are solely responsible for ensuring adequate PC cooling, airflow, and backing up critical files before enabling aggressive power profiles or automated shutdown timers.
-        </p>
-      </section>
-
-      <!-- Section 7: Third-Party Trademarks -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">7. Third-Party Trademarks & Independence</h2>
-        <p>
-          Windows, Microsoft Defender, Intel, AMD, NVIDIA, Qualcomm Snapdragon, Xbox, PlayStation, WhatsApp, LinkedIn, X (Twitter), Reddit, and Facebook are registered trademarks of their respective owners. EcoPower Suite is an independent utility and is not affiliated with, endorsed, sponsored, or certified by Microsoft Corporation or any hardware manufacturer.
-        </p>
-      </section>
-
-      <!-- Section 8: Governing Law & Jurisdiction -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">8. Governing Law & Exclusive Jurisdiction</h2>
-        <p class="mb-3">
-          This Agreement and any dispute arising from or related to the software or website shall be governed by, construed, and enforced in accordance with the substantive laws of the <strong>State of Israel</strong>, without regard to its conflict of law principles.
-        </p>
-        <p>
-          You irrevocably consent and submit to the sole and exclusive personal jurisdiction of the competent courts situated in <strong>Tel Aviv-Jaffa, Israel</strong> for any legal proceeding or claim. For users in the United States or European Union, statutory consumer protection rights that cannot be waived by contract remain intact to the strict minimum required by local mandatory law.
-        </p>
-      </section>
-
-      <!-- Section 9: Severability -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">9. Severability & Entire Agreement</h2>
-        <p>
-          If any provision of this Agreement is held to be invalid, void, or unenforceable under applicable law, such provision shall be severed or modified to the minimum extent necessary, and the remaining provisions shall continue in full force and effect.
-        </p>
-      </section>
-
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="legal-links" aria-label="Legal" style="margin-top:0">
+        <a href="terms.html">Terms of Service &amp; EULA</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="accessibility.html">הצהרת נגישות</a>
+        <a href="index.html">Home</a>
+      </nav>
+      <p class="copy">© 2026 Ziv Shabat. All rights reserved. EcoPower Suite is free proprietary software.</p>
     </div>
-
-    <!-- Bottom Footer -->
-    <div class="mt-12 text-center text-xs text-gray-500 font-mono border-t border-white/10 pt-6">
-      <p>© 2026 Ziv Shabat. All Rights Reserved. EcoPower Suite is a registered open-source & proprietary software utility.</p>
-    </div>
-  </div>
-
+  </footer>
+  <script src="assets/common.js"></script>
 </body>
 </html>

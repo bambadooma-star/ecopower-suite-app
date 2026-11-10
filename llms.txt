@@ -1,32 +1,49 @@
 # EcoPower Suite
 
-> Intelligent Windows Energy Optimization, Multi-Monitor Dimming & Power Management Utility.
+> Intelligent Windows energy optimization, multi-monitor dimming and power management utility. Free, ad-free, closed-source (proprietary).
 
 ## Project Summary
-EcoPower Suite is a lightweight, standalone, open-source Windows utility (Windows 10 & 11, 64-bit) designed to reduce idle PC electricity consumption by up to 40% and extend laptop battery life. It operates 100% offline with zero telemetry, zero adware, and zero background network connections.
+EcoPower Suite is a lightweight, standalone Windows utility (Windows 10 & 11, 64-bit, single .exe, no installer) designed to reduce idle PC electricity consumption by up to 40% (simulated estimate) and extend laptop battery life. It runs locally with no telemetry, no accounts and no adware. The only network activity is an optional, user-initiated update check and download from GitHub (api.github.com / github.com releases); in v1.1.0 the automatic update check is opt-in and off by default.
+
+- Latest version: v1.1.0 (2026-11-11)
+- Website: https://bambadooma-star.github.io/ecopower-suite-app/
+- Download: https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.0/EcoPowerSuite.exe
+- Mirror: https://bambadooma-star.github.io/ecopower-suite-app/downloads/EcoPowerSuite.exe
+- License: free to use; proprietary, closed-source; supported by voluntary donations.
 
 ## Key Capabilities
-- **Universal Hardware Dimming**: VESA DDC/CI monitor backlight dimming over HDMI/DisplayPort, and internal laptop screen brightness via WMI.
-- **Smart Battery Balancing**: Automatically transitions laptops to Balanced mode upon AC disconnection to protect battery life without aggressive screen blinding.
-- **AI & Bot Workload Shield**: Detects active local AI inference (Ollama, LM Studio, ComfyUI, PyTorch, llama.cpp), developer bot scripts (Python, Node), and GPU CUDA compute (>15% load), preventing idle sleep or CPU throttling during active compute.
-- **Non-Destructive One-Shot Architecture**: All commands execute as clean one-shot events without intrusive polling loops overriding manual user choices.
-- **Scheduled Automated Shutdown**: Integrates with Windows Task Scheduler with a 30-second warning alert, 1-hour snooze, or today cancel option.
+- **Three power modes**: Eco Saver (CPU capped, screen dimmed, PCIe ASPM max savings), Balanced (everyday default), Max Performance (full turbo).
+- **Automatic idle saver**: moves to Eco after a configurable idle time (2-60 min) and restores the previous mode on activity.
+- **Universal display dimming**: VESA DDC/CI for external monitors (range-scaled per monitor) and WMI for laptop panels, non-blocking.
+- **Smart battery balancing**: switches laptops to Balanced once when AC power is disconnected.
+- **Smart Inactivity Shield**: pauses idle dimming during fullscreen video, active audio sessions, game-controller input, and AI/bot workloads (Ollama, LM Studio, ComfyUI, llama.cpp, Whisper, NVIDIA CUDA compute above 15% load).
+- **Scheduled shutdown**: Windows Task Scheduler integration with a 30-second warning, a real 1-hour snooze, or cancel-for-today.
+- **Savings tracker**: kWh and money saved today, year-to-date and projected, using the user's own tariff and currency.
+
+## What's new in v1.1.0
+- Redesigned dashboard with sidebar navigation and a live power gauge.
+- Smoother, faster UI (background commands no longer block the window); non-blocking brightness control with correct DDC/CI range scaling.
+- Fixes: brightness no longer reset to 100% on launch; the electricity tariff setting now applies; true year-to-date savings; shutdown snooze really reschedules; CLI `--status` detects Eco correctly; laptop brightness via CLI works.
+- Safer in-app updater (integrity checks) and an opt-in automatic update check.
 
 ## CLI & Autonomous Bot Interface
-Bots, AI agents, and scripts can execute headless commands directly:
-- `EcoPowerSuite.exe --status [--json]`: Returns real-time wattage, brightness, battery, and AI shield status in structured JSON.
-- `EcoPowerSuite.exe --mode <eco|balanced|perf> [--json]`: Sets power profile instantly in one shot.
-- `EcoPowerSuite.exe --brightness <0-100> [--json]`: Sets monitor backlight level.
-- `EcoPowerSuite.exe --ai-shield [--json]`: Queries AI and bot workload detection status.
+Bots, AI agents and scripts can run headless commands:
+- `EcoPowerSuite.exe --status [--json]`: real-time wattage, brightness, battery and shield status.
+- `EcoPowerSuite.exe --mode <eco|balanced|perf> [--json]`: set the power profile in one shot.
+- `EcoPowerSuite.exe --brightness <0-100> [--json]`: set monitor backlight level.
+- `EcoPowerSuite.exe --ai-shield [--json]`: query AI and bot workload detection.
+- `EcoPowerSuite.exe --check-update [--json]`: check GitHub for a newer release.
 
-## Verified Security & Cryptographic Integrity
-- **Antivirus Detection**: 0/72 Clean across major engines (Microsoft Defender, Kaspersky, Bitdefender).
-- **Executable**: `EcoPowerSuite.exe` (v1.0.0, ~22.1 MB standalone)
-- **SHA-256 Checksum**: `A2F31F1029EDA4D72F72AFCA526DA86C6EB844AC213D846E0CDB5FA25C98DE75`
-- **Verification Command (PowerShell)**: `Get-FileHash .\EcoPowerSuite.exe -Algorithm SHA256`
+## Integrity & Verification
+- **Executable**: `EcoPowerSuite.exe` (v1.1.0, 22.2 MB, standalone)
+- **SHA-256**: `805A056D580FDACC3A8A9B457F5FD3088C79871735EB0F8510E572201B84033D`
+- **Verify (PowerShell)**: `Get-FileHash .\EcoPowerSuite.exe -Algorithm SHA256`
+- **VirusTotal lookup by hash**: https://www.virustotal.com/gui/file/805A056D580FDACC3A8A9B457F5FD3088C79871735EB0F8510E572201B84033D
+- Windows SmartScreen may show "Unknown publisher" for a new, unsigned free utility: choose "More info" then "Run anyway" after verifying the hash.
 
-## Legal Disclaimers & Regulatory Compliance
-- **Warranty**: Provided strictly "AS-IS" without warranties of any kind (UCC §§ 2-314/2-315, international law).
-- **Limitation of Liability**: Author and contributors assume zero liability for hardware degradation, display issues, or utility bill discrepancies. Energy calculations are educational simulations.
-- **Privacy & Compliance**: Fully compliant with EU GDPR (Regulation 2016/679), US CCPA/CPRA, and Israeli Privacy Protection Law 5741-1981. Accessible under Israeli Standard IS 5568 Level AA and WCAG 2.1 AA.
-- **Governing Law**: State of Israel, exclusive jurisdiction in Tel Aviv-Jaffa.
+## Legal
+- **Warranty**: provided "AS-IS" without warranties of any kind (UCC 2-314/2-315 and international law).
+- **Limitation of liability**: the author and contributors accept no liability for hardware, display, data or utility-bill effects. Energy and cost figures are simulated estimates.
+- **Privacy**: no telemetry and no cookies; EU GDPR, US CCPA/CPRA and Israeli Privacy Protection Law 5741-1981 addressed in https://bambadooma-star.github.io/ecopower-suite-app/privacy.html
+- **Accessibility**: Israeli Standard IS 5568 (Level AA) and WCAG 2.1 AA targeted; see https://bambadooma-star.github.io/ecopower-suite-app/accessibility.html
+- **Governing law**: State of Israel, exclusive jurisdiction in Tel Aviv-Jaffa.

@@ -1,199 +1,138 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy | EcoPower Suite</title>
-  <meta name="description" content="Official Privacy Policy for EcoPower Suite — Full compliance with EU GDPR, US CCPA/CPRA, and Israeli Privacy Protection Law 5741-1981.">
+  <meta name="description" content="Privacy Policy for EcoPower Suite: no telemetry, no cookies, local-first data, and the single optional network use (GitHub update check). GDPR, CCPA and Israeli Privacy Protection Law.">
+  <meta name="theme-color" content="#070b14">
+  <link rel="canonical" href="https://bambadooma-star.github.io/ecopower-suite-app/privacy.html">
   <link rel="icon" type="image/x-icon" href="assets/icon.ico">
-  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              black: '#07090e',
-              dark: '#0c1017',
-              card: '#131b2c',
-              border: 'rgba(255, 255, 255, 0.08)',
-              emerald: '#10b981',
-              cyan: '#06b6d4',
-            }
-          }
-        }
-      }
-    }
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('eco_theme');
+        if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        d.setAttribute('data-theme', t);
+        var a = JSON.parse(localStorage.getItem('eco_a11y') || '{}');
+        if (a.scale) d.style.fontSize = a.scale + '%';
+      } catch (e) { /* storage blocked */ }
+    })();
   </script>
-  <style>
-    body { background-color: #07090e; color: #cbd5e1; }
-    .glass-panel {
-      background: rgba(19, 27, 44, 0.65);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-  </style>
+  <link rel="stylesheet" href="assets/site.css">
 </head>
-<body class="min-h-screen relative py-12 px-6 selection:bg-emerald-500 selection:text-black">
-
-  <div class="max-w-4xl mx-auto">
-    <!-- Top Back Navigation -->
-    <div class="mb-8 flex items-center justify-between border-b border-white/10 pb-4">
-      <a href="index.html" class="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 font-semibold transition-colors">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-        <span>Back to EcoPower Suite</span>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-in">
+      <a href="index.html" class="brand" aria-label="EcoPower Suite">
+        <img src="assets/logo-96.png" alt="" width="38" height="38">
+        <span><span class="brand-name">EcoPower <b>Suite</b></span><span class="brand-sub">v1.1.0</span></span>
       </a>
-      <span class="text-xs font-mono text-gray-500">Effective Date: November 2026</span>
+      <div class="header-actions">
+        <a class="btn btn-sm" href="index.html"><svg class="i" aria-hidden="true" style="transform:scaleX(-1)"><use href="assets/icons.svg#i-arrow"/></svg><span>Back to EcoPower Suite</span></a>
+        <button type="button" class="btn btn-icon" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-sun"/></svg></button>
+      </div>
     </div>
-
-    <!-- Header -->
-    <div class="mb-10 text-center sm:text-left">
-      <span class="text-xs uppercase font-mono font-bold tracking-widest text-cyan-400">GLOBAL PRIVACY & DATA PROTECTION</span>
-      <h1 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 mb-4">Privacy Policy</h1>
-      <p class="text-sm sm:text-base text-gray-400 leading-relaxed">
-        We respect your privacy and are committed to complete transparency. This policy outlines our strict offline principles and compliance with the <strong>European Union GDPR</strong>, <strong>California CCPA/CPRA</strong>, and the <strong>Israeli Privacy Protection Law (5741-1981)</strong>.
-      </p>
+  </header>
+  <main id="main" class="doc-wrap">
+    <div class="doc-head">
+      <span class="eyebrow">Global privacy &amp; data protection</span>
+      <h1>Privacy Policy</h1>
+      <p>We respect your privacy and aim for complete transparency. This policy describes how EcoPower Suite and this website handle data, and our compliance with the <strong>EU GDPR</strong>, <strong>California CCPA/CPRA</strong> and the <strong>Israeli Privacy Protection Law (5741-1981)</strong>.</p>
+      <p class="doc-meta" style="margin-top:.8rem">Effective date: November 2026 · Applies to v1.1.0</p>
     </div>
-
-    <!-- Main Content Panels -->
-    <div class="space-y-8 text-sm leading-relaxed text-gray-300">
-
-      <!-- Section 1: Executive Summary -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8 border-l-4 border-l-emerald-500 bg-emerald-950/10">
-        <h2 class="text-lg font-bold text-emerald-400 mb-2">Executive Summary: Zero Telemetry & 100% Offline Software</h2>
-        <p class="text-gray-200">
-          The <strong>EcoPower Suite desktop application operates 100% offline</strong>. It contains no spyware, no background telemetry, no tracking pixels, and does not open any network sockets to external servers. It manages your Windows power schemes and monitor brightness purely through local system APIs.
-        </p>
-      </section>
-
-      <!-- Section 2: Data Controller Info -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">1. Data Controller & Contact Information</h2>
-        <p class="mb-3">
-          For the purposes of the General Data Protection Regulation (GDPR) and international privacy laws, the Data Controller is:
-        </p>
-        <div class="bg-gray-900/60 p-4 rounded-xl border border-white/5 font-mono text-xs space-y-1">
-          <div><strong class="text-white">Project:</strong> EcoPower Suite Utility</div>
-          <div><strong class="text-white">Author / Maintainer:</strong> Ziv Shabat</div>
-          <div><strong class="text-white">Location / Jurisdiction:</strong> Tel Aviv, Israel</div>
-          <div><strong class="text-white">Official Repository:</strong> <a href="https://github.com/bambadooma-star/ecopower-suite-app" class="text-cyan-400 underline">bambadooma-star/ecopower-suite-app</a></div>
-          <div><strong class="text-white">Privacy Inquiries:</strong> Accessible via GitHub Issues or project repository contact.</div>
-        </div>
-      </section>
-
-      <!-- Section 3: Notice Under Israeli Law (Section 11) -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">2. Notice Under Israeli Privacy Protection Law (הודעה לפי סעיף 11 לחוק הגנת הפרטיות, התשמ"א-1981)</h2>
-        <div class="space-y-3">
-          <p>
-            בהתאם להוראות סעיף 11 לחוק הגנת הפרטיות, התשמ"א-1981, מובהר בזאת:
-          </p>
-          <ul class="list-disc pl-5 space-y-1 text-gray-300">
-            <li><strong>אי חובה חוקית:</strong> לא חלה עליך כל חובה חוקית למסור מידע כלשהו בעת הגלישה באתר או השימוש בתוכנה, ומסירת כל נתון הינה מרצונך ומהסכמתך החופשית המלאה.</li>
-            <li><strong>מטרת המידע:</strong> האתר משתמש באחסון מקומי בלבד (<code class="text-cyan-400">localStorage</code>) לצורך תפקוד טכני של האתר (הצגת חישובי חיסכון, העדפות משתמש, וסטטיסטיקה מקומית אנונימית ומצטברת בלבד).</li>
-            <li><strong>מסירה לצדדים שלישיים:</strong> שום מידע אישי מזהה אינו נמכר, אינו מועבר, ואינו משותף עם צדדים שלישיים למטרות שיווק או מעקב מסחרי.</li>
-            <li><strong>זכות עיון ותיקון:</strong> בהתאם לסעיפים 13 ו-14 לחוק, כל אדם זכאי לעיין במידע שעליו המוחזק במאגר מידע ולבקש את תיקונו או מחיקתו.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Section 4: European Union GDPR Compliance -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">3. European Union GDPR Compliance (Regulation EU 2016/679)</h2>
-        <p class="mb-3">
-          If you are an individual resident within the European Economic Area (EEA), you have specific statutory rights under Articles 15 through 22 of the GDPR:
-        </p>
-        <ul class="list-disc pl-5 space-y-1.5 text-gray-300 mb-4">
-          <li><strong>Right of Access (Article 15):</strong> Request confirmation of whether your personal data is processed.</li>
-          <li><strong>Right to Rectification (Article 16):</strong> Request correction of inaccurate personal data.</li>
-          <li><strong>Right to Erasure / "To Be Forgotten" (Article 17):</strong> Request deletion of personal data. (Because our software runs 100% offline, clearing your browser’s local storage completely erases all website telemetry instantly).</li>
-          <li><strong>Right to Restrict Processing (Article 18) & Data Portability (Article 20):</strong> Export your telemetry metrics via the built-in JSON exporter.</li>
-          <li><strong>Right to Object (Article 21):</strong> Object to processing based on legitimate interests.</li>
-          <li><strong>Right to Lodge a Complaint:</strong> You have the right to lodge a complaint with an EU data protection supervisory authority in your member state.</li>
+    <nav class="doc-toc" aria-label="Sections"><a href="#summary">Summary</a><a href="#israel">Israeli law</a><a href="#gdpr">GDPR</a><a href="#ccpa">CCPA</a><a href="#cookies">Cookies &amp; storage</a><a href="#hosting">Hosting</a></nav>
+    <section class="doc-sec" id="summary">
+      <h2>Executive summary: no telemetry, local-first</h2>
+      <p>The <strong>EcoPower Suite desktop application collects no personal data and sends no telemetry</strong>. There are no accounts, tracking pixels or analytics. It manages your Windows power plans and monitor brightness through local system APIs, and its settings and savings history are stored only on your computer in <code>%LOCALAPPDATA%\EcoPowerSuite\config.json</code>.</p>
+      <div class="doc-note"><p><strong>The one network exception:</strong> the app can contact GitHub (<code>api.github.com</code> and <code>github.com</code>) to check for and download a newer release. This happens only when you click <em>Check for updates</em> or, in v1.1.0 and later, if you opt in to the automatic check (off by default). Like any web request, GitHub receives your IP address and a request header identifying the updater (<code>EcoPowerSuite-Updater</code>) under GitHub's own privacy statement. EcoPower Suite does not add any identifier of its own.</p></div>
+    </section>
+    <section class="doc-sec" id="controller">
+      <h2>1. Data Controller &amp; Contact Information</h2>
+      <p>For the purposes of the GDPR and international privacy laws, the data controller is:</p>
+      <div class="kvbox">
+        <div><span>Project</span><b>EcoPower Suite Utility</b></div>
+        <div><span>Author / maintainer</span><b>Ziv Shabat</b></div>
+        <div><span>Location / jurisdiction</span><b>Tel Aviv, Israel</b></div>
+        <div><span>Official repository</span><b><a href="https://github.com/bambadooma-star/ecopower-suite-app">bambadooma-star/ecopower-suite-app</a></b></div>
+        <div><span>Privacy inquiries</span><b>Via GitHub Issues on the repository</b></div>
+      </div>
+    </section>
+    <section class="doc-sec" id="israel">
+      <h2>2. Notice Under the Israeli Privacy Protection Law (הודעה לפי סעיף 11 לחוק הגנת הפרטיות, התשמ"א-1981)</h2>
+      <div class="doc-note" dir="rtl" lang="he">
+        <p>בהתאם להוראות סעיף 11 לחוק הגנת הפרטיות, התשמ"א-1981, מובהר בזאת:</p>
+        <ul>
+          <li><strong>אי חובה חוקית:</strong> לא חלה עליך כל חובה חוקית למסור מידע כלשהו בעת הגלישה באתר או השימוש בתוכנה, ומסירת כל נתון הינה מרצונך ומהסכמתך החופשית המלאה.</li>
+          <li><strong>מטרת המידע:</strong> האתר משתמש באחסון מקומי בלבד (<code>localStorage</code>) לצורך תפקוד טכני של האתר (העדפות משתמש, חישובי חיסכון וסטטיסטיקה מקומית אנונימית ומצטברת בלבד, השמורה במכשיר שלך). לצורך הצגת מספר ההורדות מתבצעת קריאה ציבורית ל־GitHub API, שבמסגרתה GitHub מקבלת את כתובת ה־IP שלך כמקובל בכל בקשת רשת.</li>
+          <li><strong>מסירה לצדדים שלישיים:</strong> שום מידע אישי מזהה אינו נמכר, אינו מועבר ואינו משותף עם צדדים שלישיים למטרות שיווק או מעקב מסחרי.</li>
+          <li><strong>זכות עיון ותיקון:</strong> בהתאם לסעיפים 13 ו־14 לחוק, כל אדם זכאי לעיין במידע שעליו המוחזק במאגר מידע ולבקש את תיקונו או מחיקתו.</li>
         </ul>
-        <p class="text-xs text-gray-400">
-          <strong>Legal Basis for Processing:</strong> We rely on Legitimate Interests (Art. 6(1)(f) GDPR) to maintain website security, prevent distributed denial-of-service (DDoS) abuse via GitHub Pages infrastructure, and optimize software compatibility across hardware platforms.
-        </p>
-      </section>
+      </div>
+    </section>
+    <section class="doc-sec" id="gdpr">
+      <h2>3. European Union GDPR (Regulation EU 2016/679)</h2>
+      <p>If you are located in the European Economic Area, you have the following rights under Articles 15–22 of the GDPR:</p>
+      <ul>
+        <li><strong>Access (Art. 15):</strong> ask whether personal data about you is processed.</li>
+        <li><strong>Rectification (Art. 16):</strong> ask for inaccurate data to be corrected.</li>
+        <li><strong>Erasure (Art. 17):</strong> because the data this site keeps lives only in your own browser, clearing your browser's local storage (or using <em>Clear / reset data</em> in the Page stats dialog) erases it instantly.</li>
+        <li><strong>Restriction (Art. 18) &amp; portability (Art. 20):</strong> export your local page stats as JSON from the Page stats dialog.</li>
+        <li><strong>Objection (Art. 21):</strong> object to processing based on legitimate interests.</li>
+        <li><strong>Complaint:</strong> lodge a complaint with an EU supervisory authority in your member state.</li>
+      </ul>
+      <p><strong>Legal basis:</strong> to the extent any processing occurs (for example, GitHub Pages server logs), it relies on legitimate interests (Art. 6(1)(f)) in operating and securing a static website.</p>
+    </section>
+    <section class="doc-sec" id="ccpa">
+      <h2>4. California Consumer Privacy Disclosures (CCPA &amp; CPRA)</h2>
+      <p>Under the California Consumer Privacy Act (Cal. Civ. Code § 1798.100 et seq.), California residents are entitled to these disclosures:</p>
+      <div class="kvbox">
+        <div><span>Categories of personal information collected by us</span><b>None</b></div>
+        <div><span>Personal information sold</span><b>No — never sold</b></div>
+        <div><span>Shared for cross-context behavioral advertising</span><b>No — no ad networks</b></div>
+      </div>
+      <p style="margin-top:.9rem"><strong>Right to opt out:</strong> we do not sell or share personal data, so no opt-out mechanism is required. We honor Global Privacy Control (GPC) and Do Not Track (DNT) signals by design: nothing here tracks you.</p>
+    </section>
+    <section class="doc-sec" id="cookies">
+      <h2>5. Cookies &amp; Local Storage (ePrivacy Directive)</h2>
+      <p>This website sets <strong>no cookies</strong> — no third-party tracking cookies and no advertising cookies. It stores the following strictly functional keys in your browser's sandboxed storage, on your device only:</p>
+      <ul>
+        <li><code>eco_theme</code>, <code>eco_lang</code>: your theme and language choice.</li>
+        <li><code>eco_a11y</code>: your accessibility settings (text size, contrast, link highlight, paused motion, readable font).</li>
+        <li><code>eco_privacy_notice_dismissed</code>: remembers that you closed the privacy notice.</li>
+        <li><code>ecopower_telemetry_store</code>: anonymous page counters (visits, referrer hostnames, simulator/calculator use, download clicks) kept <em>only in your browser</em> and never transmitted. You can view, export or erase it from <em>Page stats</em> in the footer.</li>
+        <li><code>eco_session_active</code>, <code>eco_gh_count</code> (session storage): a per-tab flag and a 10-minute cache of the public GitHub download count.</li>
+      </ul>
+      <p>You can clear these at any moment through your browser settings or the <em>Clear / reset data</em> button in the Page stats dialog.</p>
+    </section>
+    <section class="doc-sec" id="children">
+      <h2>6. Children's Online Privacy (COPPA &amp; GDPR-K)</h2>
+      <p>Neither the website nor the application is directed to children under 13 (or under 16 in certain EU member states). We do not knowingly collect personal information from children.</p>
+    </section>
+    <section class="doc-sec" id="hosting">
+      <h2>7. Hosting &amp; Third-Party Services</h2>
+      <p>This static website is hosted on <strong>GitHub Pages</strong> (GitHub, Inc. / Microsoft Corporation). GitHub may collect standard HTTP server logs (IP address, user-agent, request headers) for operational integrity and DDoS defense under GitHub's Global Privacy Statement.</p>
+      <p>All styles, scripts, fonts and icons are served from this site itself — there are no third-party CDNs, fonts, analytics or ad scripts. The only third-party request the page makes is a public, unauthenticated call to the GitHub Releases API to display the download count; GitHub sees your IP address for that request. Links to VirusTotal, PayPal and social networks only load if you click them.</p>
+    </section>
+    <section class="doc-sec" id="updates">
+      <h2>8. Updates &amp; Modifications</h2>
+      <p>We may revise this Privacy Policy to reflect software updates, new regulations or best practices. The effective date above shows the latest revision.</p>
+    </section>
 
-      <!-- Section 5: California Consumer Privacy Act (CCPA / CPRA) -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">4. California Consumer Privacy Disclosures (CCPA & CPRA)</h2>
-        <p class="mb-3">
-          Under the California Consumer Privacy Act (Cal. Civ. Code § 1798.100 et seq.), California residents are entitled to specific disclosures:
-        </p>
-        <div class="bg-gray-900/60 p-4 rounded-xl border border-white/5 space-y-2 text-xs mb-3">
-          <div class="flex justify-between">
-            <span class="text-gray-400">Categories of PII Collected:</span>
-            <span class="text-emerald-400 font-bold">None (Zero PII collected)</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="text-gray-400">Personal Information Sold:</span>
-            <span class="text-emerald-400 font-bold">Zero ($0.00 / Never Sold)</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="text-gray-400">Shared for Cross-Context Behavioral Advertising:</span>
-            <span class="text-emerald-400 font-bold">Zero (No ad networks)</span>
-          </div>
-        </div>
-        <p>
-          <strong>Notice of Right to Opt-Out:</strong> We do NOT sell or share your personal data. Therefore, an opt-out mechanism is not needed. We fully honor Global Privacy Control (GPC) and Do Not Track (DNT) browser header signals.
-        </p>
-      </section>
-
-      <!-- Section 6: Cookies and Local Storage Policy -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">5. Cookie & Local Storage (ePrivacy Directive)</h2>
-        <p class="mb-3">
-          EcoPower Suite uses <strong>ZERO third-party tracking cookies</strong> and <strong>ZERO advertising cookies</strong>. We believe in an uncluttered web without deceptive cookie walls.
-        </p>
-        <p class="mb-2">We store the following strictly functional keys inside your browser’s sandboxed <code class="text-cyan-400">localStorage</code>:</p>
-        <ul class="list-disc pl-5 space-y-1 text-xs font-mono text-gray-300">
-          <li><code class="text-emerald-400">ecopower_telemetry_store</code>: Retains anonymous visitor counts, screen resolution, and simulator interactions on your own device.</li>
-          <li><code class="text-emerald-400">eco_session_active</code>: Session flag to prevent duplicate visit counting during page refreshes.</li>
-          <li><code class="text-emerald-400">eco_accessibility_settings</code>: Remembers your high-contrast and text-size preferences.</li>
-        </ul>
-        <p class="mt-3 text-xs text-gray-400">
-          You may clear these keys at any moment via your browser settings or by clicking "Clear / Reset Data" in the internal console.
-        </p>
-      </section>
-
-      <!-- Section 7: Children's Privacy (COPPA) -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">6. Children's Online Privacy (COPPA & GDPR-K)</h2>
-        <p>
-          Neither the website nor the downloadable application is directed toward children under 13 years of age (or under 16 in certain EU member states). We do not knowingly collect personal identifiable information from children. If you believe a child has provided data, please contact us for immediate purge.
-        </p>
-      </section>
-
-      <!-- Section 8: Hosting & Third-Party Infrastructure -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">7. Hosting & Third-Party Content Delivery Networks</h2>
-        <p class="mb-3">
-          This static website is hosted on <strong>GitHub Pages</strong> (provided by GitHub, Inc. / Microsoft Corporation). Standard HTTP access server logs (IP address, user-agent, request headers) may be collected by GitHub's edge routers for operational integrity, load balancing, and DDoS defense under GitHub’s Global Privacy Statement.
-        </p>
-        <p>
-          Styles are served via Tailwind CDN. No personal profiling is performed.
-        </p>
-      </section>
-
-      <!-- Section 9: Updates to Policy -->
-      <section class="glass-panel rounded-2xl p-6 sm:p-8">
-        <h2 class="text-lg font-bold text-white mb-3">8. Updates & Modifications</h2>
-        <p>
-          We reserve the right to revise this Privacy Policy at any time to reflect software updates, new statutory regulations, or legal best practices. The "Effective Date" at the top will indicate when the latest revision was published.
-        </p>
-      </section>
-
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="legal-links" aria-label="Legal" style="margin-top:0">
+        <a href="terms.html">Terms of Service &amp; EULA</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="accessibility.html">הצהרת נגישות</a>
+        <a href="index.html">Home</a>
+      </nav>
+      <p class="copy">© 2026 Ziv Shabat. All rights reserved. EcoPower Suite Privacy &amp; Security Center.</p>
     </div>
-
-    <!-- Bottom Footer -->
-    <div class="mt-12 text-center text-xs text-gray-500 font-mono border-t border-white/10 pt-6">
-      <p>© 2026 Ziv Shabat. All Rights Reserved. EcoPower Suite Privacy & Security Center.</p>
-    </div>
-  </div>
-
+  </footer>
+  <script src="assets/common.js"></script>
 </body>
 </html>
