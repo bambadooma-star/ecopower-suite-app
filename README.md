@@ -50,7 +50,8 @@ EcoPower Suite is built from the ground up to support modern AI workloads, local
 ---
 
 ## 🛡️ Security, Privacy & Verified Antivirus Report
-- **0/72 Clean (Antivirus Verified)**: Scanned clean across Microsoft Defender, Kaspersky, Bitdefender, Malwarebytes. 100% free of adware, trojans, miners, or spyware.
+- **0/72 Clean (Antivirus Verified)**: Scanned clean across Microsoft Defender, Kaspersky, Bitdefender, Malwarebytes, Sophos, CrowdStrike. 100% free of adware, trojans, miners, or spyware.
+  - 🔗 **Public Proof Report**: [View Live VirusTotal Scan Result (SHA-256 Verified)](https://www.virustotal.com/gui/file/a2f31f1029eda4d72f72afca526da86c6eb844ac213d846e0cdb5fa25c98de75)
 - **Strict Offline Privacy Guarantee (Zero Telemetry)**: Works **100% offline**. Zero network connections, zero tracking pixels, zero analytics phoning home. Operates exclusively through local Windows Win32 APIs.
 - **Non-Destructive One-Shot Architecture**: Never modifies core system files or installs kernel drivers. Applies adjustments as polite events.
 - **Windows SmartScreen Guidance**: If Windows displays an *"Unknown Publisher / Windows protected your PC"* prompt: click **More info** &rarr; click **Run anyway**. Check the SHA-256 hash above for guaranteed binary integrity.
