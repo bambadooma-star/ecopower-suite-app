@@ -9,11 +9,11 @@ Welcome to the official public repository for **EcoPower Suite** — the intelli
 ---
 
 ## ⚡ Direct Download
-- **Executable**: [EcoPowerSuite.exe (v1.0.0)](https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.0.0/EcoPowerSuite.exe)
+- **Executable**: [EcoPowerSuite.exe (v1.0.1)](https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.0.1/EcoPowerSuite.exe)
 - **Direct Mirror**: [downloads/EcoPowerSuite.exe](https://bambadooma-star.github.io/ecopower-suite-app/downloads/EcoPowerSuite.exe)
-- **Binary Size**: ~22.1 MB (Zero external dependencies)
+- **Binary Size**: ~20.7 MB (Zero external dependencies)
 - **Platform**: Windows 10 & 11 (64-bit x86_64)
-- **SHA-256 Checksum**: `03A856422E27E84730829FE578FF2D9CF96CB8BCAE1D33EB35CB7651C7C9574E`
+- **SHA-256 Checksum**: `9951AE30102A3CEB772FF6C32E4FF8C1695C05CA7B218451E28238717516CFEB`
 
 ### 🔑 Cryptographic Verification (PowerShell)
 You can verify the downloaded binary directly in Windows PowerShell:
@@ -21,7 +21,7 @@ You can verify the downloaded binary directly in Windows PowerShell:
 Get-FileHash .\EcoPowerSuite.exe -Algorithm SHA256
 ```
 Ensure the hash output matches:
-`03A856422E27E84730829FE578FF2D9CF96CB8BCAE1D33EB35CB7651C7C9574E`
+`9951AE30102A3CEB772FF6C32E4FF8C1695C05CA7B218451E28238717516CFEB`
 
 ---
 
