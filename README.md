@@ -73,5 +73,5 @@ EcoPower Suite complies with international regulatory standards:
 
 ---
 
-## 📄 License
-Proprietary & Open Digital Utility © 2026 Ziv Shabat. All Rights Reserved.
+## 📄 License & Proprietary Rights
+Proprietary Commercial Software © 2026 Ziv Shabat. All Rights Reserved. Unauthorized copying, distribution, modification, decompilation, or reverse engineering of this software binary and website is strictly prohibited.
