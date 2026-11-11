@@ -3,25 +3,25 @@
 Official public repository for **EcoPower Suite** — the intelligent Windows desktop utility for hardware energy optimization, power-scheme management, DDC/CI monitor dimming, AI/bot workload protection and battery-life maximization.
 
 🌐 **Website**: <https://bambadooma-star.github.io/ecopower-suite-app/>  
-📦 **Latest release**: [v1.1.2](https://github.com/bambadooma-star/ecopower-suite-app/releases/tag/v1.1.2)  
+📦 **Latest release**: [v1.1.3](https://github.com/bambadooma-star/ecopower-suite-app/releases/tag/v1.1.3)  
 🤖 **AI documentation**: [llms.txt](https://bambadooma-star.github.io/ecopower-suite-app/llms.txt)
 
 ---
 
 ## ⚡ Download
-- **Executable**: [EcoPowerSuite.exe (v1.1.2)](https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.2/EcoPowerSuite.exe)
+- **Executable**: [EcoPowerSuite.exe (v1.1.3)](https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.3/EcoPowerSuite.exe)
 - **Direct mirror**: [downloads/EcoPowerSuite.exe](https://bambadooma-star.github.io/ecopower-suite-app/downloads/EcoPowerSuite.exe)
 - **Size**: 16.0 MB (single file, no installer)
 - **Platform**: Windows 10 & 11 (64-bit, x86_64)
 - **Release date**: 2026-11-11
-- **SHA-256**: `32A4C81DD35940A466DDD693C014D4A5822B220909E0B2779E2CD6972F8A481E`
+- **SHA-256**: `72A89501CD44C238B6B5C3D9DB0819DADF3DC1F4B12A1138192DA5FDDB716978`
 
 ### 🔑 Verify the download (PowerShell)
 ```powershell
 Get-FileHash .\EcoPowerSuite.exe -Algorithm SHA256
 ```
 The output must match the SHA-256 above. You can also look the hash up on VirusTotal:
-<https://www.virustotal.com/gui/file/32A4C81DD35940A466DDD693C014D4A5822B220909E0B2779E2CD6972F8A481E> (or upload the file at <https://www.virustotal.com/gui/home/upload>) and review the engines' verdicts yourself.
+<https://www.virustotal.com/gui/file/72A89501CD44C238B6B5C3D9DB0819DADF3DC1F4B12A1138192DA5FDDB716978> (or upload the file at <https://www.virustotal.com/gui/home/upload>) and review the engines' verdicts yourself.
 
 ---
 
