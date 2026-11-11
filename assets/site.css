@@ -31,8 +31,8 @@
   --code-bg: #060a12;
   --r: 18px;
   --r-lg: 26px;
-  --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Roboto, Arial, "Noto Sans Hebrew", sans-serif;
-  --mono: ui-monospace, "Cascadia Code", "SF Mono", Consolas, "Liberation Mono", monospace;
+  --font: "Segoe UI", Arial, sans-serif;
+  --mono: Consolas, "Courier New", monospace;
 }
 
 :root[data-theme="light"] {
@@ -573,3 +573,13 @@ dialog.stats::backdrop { background: rgba(2, 6, 14, .72); backdrop-filter: blur(
 :root[lang="he"] .eyebrow, :root[lang="he"] .field-head label, :root[lang="he"] .field-head .lbl, :root[lang="he"] .result .lbl, :root[lang="he"] .stepno { letter-spacing: .02em; text-transform: none; }
 :root[lang="he"] h1, :root[lang="he"] h2, :root[lang="he"] h3, :root[lang="he"] h4 { letter-spacing: -0.01em; line-height: 1.2; }
 :root[lang="he"] .hero h1 { line-height: 1.12; }
+
+/* ---- Easy / Advanced view ---- */
+:root[data-view="easy"] [data-level="adv"] { display: none !important; }
+#btnView { white-space: nowrap; font-family: var(--font); font-weight: 700; }
+
+/* ---- Hebrew: calm, regular weights (heavy weights looked clumsy in Hebrew) ---- */
+:root[lang="he"] h1, :root[lang="he"] h2, :root[lang="he"] h3, :root[lang="he"] h4,
+:root[lang="he"] .hero h1, :root[lang="he"] .brand-name { font-weight: 700; letter-spacing: 0; }
+:root[lang="he"] .hero h1 { line-height: 1.2; font-size: clamp(2rem, 4.6vw, 3.4rem); }
+:root[lang="he"] body, :root[lang="he"] button, :root[lang="he"] input { font-family: "Segoe UI", Arial, sans-serif; }

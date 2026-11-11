@@ -40,14 +40,15 @@
     "name": "EcoPower Suite",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Windows 10, Windows 11",
-    "softwareVersion": "1.1.1",
+    "softwareVersion": "1.1.2",
     "description": "Windows energy optimizer: smart power modes, multi-monitor DDC/CI dimming, laptop battery balancing, AI-workload-aware idle protection and scheduled shutdown.",
-    "downloadUrl": "https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.1/EcoPowerSuite.exe",
+    "downloadUrl": "https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.2/EcoPowerSuite.exe",
     "url": "https://bambadooma-star.github.io/ecopower-suite-app/",
     "author": { "@type": "Person", "name": "Ziv Shabat" },
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
+<script>try{var v=localStorage.getItem('eco_view');document.documentElement.setAttribute('data-view',v==='adv'?'adv':'easy');}catch(e){document.documentElement.setAttribute('data-view','easy');}</script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
@@ -57,35 +58,36 @@
     <div class="container header-in">
       <a href="#top" class="brand" aria-label="EcoPower Suite">
         <img src="assets/logo-96.png" alt="" width="38" height="38">
-        <span><span class="brand-name">EcoPower <b>Suite</b></span><span class="brand-sub">v1.1.1 · Windows 10/11 x64</span></span>
+        <span><span class="brand-name">EcoPower <b>Suite</b></span><span class="brand-sub">v1.1.2 · Windows 10/11 x64</span></span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#demo" data-i18n="nav.demo">Live demo</a>
+        <a href="#demo" data-level="adv" data-i18n="nav.demo">Live demo</a>
         <a href="#features" data-i18n="nav.features">Features</a>
-        <a href="#smart" data-i18n="nav.shield">Smart Shield</a>
-        <a href="#calculator" data-i18n="nav.calc">Savings calculator</a>
-        <a href="#security" data-i18n="nav.security">Security</a>
+        <a href="#smart" data-level="adv" data-i18n="nav.shield">Smart Shield</a>
+        <a href="#calculator" data-level="adv" data-i18n="nav.calc">Savings calculator</a>
+        <a href="#security" data-level="adv" data-i18n="nav.security">Security</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
       <div class="header-actions">
         <button type="button" class="btn btn-icon" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-sun"/></svg></button>
-        <button type="button" class="btn lang-btn btn-icon" id="btnLang" aria-label="עברית / English"><span id="langLbl">עב</span></button>
+        <button type="button" class="btn lang-btn btn-icon" id="btnView" aria-pressed="false"><span id="viewLbl">Advanced view</span></button>
+        <button type="button" class="btn lang-btn btn-icon" id="btnLang" aria-label="עברית / English"><span id="langLbl">HE</span></button>
         <a class="btn btn-amber btn-sm" href="https://www.paypal.com/ncp/payment/TTMZVMEH9EADL" target="_blank" rel="noopener noreferrer" data-i18n-title="support.title" title="Support the developer on PayPal"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-coffee"/></svg><span data-i18n="support">Support</span></a>
-        <a class="btn btn-primary btn-sm dl-header" data-dl="header" href="https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.1/EcoPowerSuite.exe" download="EcoPowerSuite.exe"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-download"/></svg><span data-i18n="download">Download</span></a>
+        <a class="btn btn-primary btn-sm dl-header" data-dl="header" href="https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.2/EcoPowerSuite.exe" download="EcoPowerSuite.exe"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-download"/></svg><span data-i18n="download">Download</span></a>
         <button type="button" class="btn btn-icon menu-btn" id="btnMenu" aria-expanded="false" aria-controls="drawer" data-i18n-aria="menu" aria-label="Menu"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-menu"/></svg></button>
       </div>
     </div>
     <div class="drawer" id="drawer">
       <div class="drawer-grid">
-        <a href="#demo"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-play"/></svg><span data-i18n="nav.demo">Live demo</span></a>
+        <a href="#demo" data-level="adv"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-play"/></svg><span data-i18n="nav.demo">Live demo</span></a>
         <a href="#features"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-sparkles"/></svg><span data-i18n="nav.features">Features</span></a>
-        <a href="#smart"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-shield"/></svg><span data-i18n="nav.shield">Smart Shield</span></a>
-        <a href="#calculator"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-coins"/></svg><span data-i18n="nav.calc">Savings calculator</span></a>
-        <a href="#security"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg><span data-i18n="nav.security">Security</span></a>
+        <a href="#smart" data-level="adv"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-shield"/></svg><span data-i18n="nav.shield">Smart Shield</span></a>
+        <a href="#calculator" data-level="adv"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-coins"/></svg><span data-i18n="nav.calc">Savings calculator</span></a>
+        <a href="#security" data-level="adv"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg><span data-i18n="nav.security">Security</span></a>
         <a href="#faq"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg><span data-i18n="nav.faq">FAQ</span></a>
       </div>
       <a class="btn btn-amber" href="https://www.paypal.com/ncp/payment/TTMZVMEH9EADL" target="_blank" rel="noopener noreferrer"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-coffee"/></svg><span data-i18n="support.long">Support the independent developer on PayPal</span></a>
-      <a class="btn btn-primary" data-dl="drawer" href="https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.1/EcoPowerSuite.exe" download="EcoPowerSuite.exe"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-download"/></svg><span data-i18n="dl.long">Download free v1.1.1 (Windows 64-bit)</span></a>
+      <a class="btn btn-primary" data-dl="drawer" href="https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.2/EcoPowerSuite.exe" download="EcoPowerSuite.exe"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-download"/></svg><span data-i18n="dl.long">Download free v1.1.2 (Windows 64-bit)</span></a>
     </div>
   </header>
 
@@ -98,11 +100,11 @@
           <h1 class="reveal" data-i18n="hero.h1">Cut your PC's power use by <span class="grad-text">up to 40%</span></h1>
           <p class="lead reveal" data-i18n="hero.lead">Smart energy management for Windows desktops, laptops and multi-monitor setups. Lower electricity bills, reduce heat and shrink your carbon footprint — with no installer, no ads and no telemetry.</p>
           <div class="cta-row reveal">
-            <a class="btn btn-primary btn-lg" data-dl="hero" href="https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.1/EcoPowerSuite.exe" download="EcoPowerSuite.exe">
+            <a class="btn btn-primary btn-lg" data-dl="hero" href="https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.2/EcoPowerSuite.exe" download="EcoPowerSuite.exe">
               <svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-download"/></svg>
-              <span><span data-i18n="hero.cta">Download for Windows</span> <small class="mono" style="opacity:.75;font-weight:600">v1.1.1 · 17.1 MB</small></span>
+              <span><span data-i18n="hero.cta">Download for Windows</span> <small class="mono" style="opacity:.75;font-weight:600">v1.1.2 · 16.0 MB</small></span>
             </a>
-            <a class="btn btn-lg" href="#demo"><span data-i18n="hero.demo">Try the live demo</span><svg class="i flip-rtl" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></a>
+            <a class="btn btn-lg" href="#demo" data-level="adv"><span data-i18n="hero.demo">Try the live demo</span><svg class="i flip-rtl" aria-hidden="true"><use href="assets/icons.svg#i-arrow"/></svg></a>
           </div>
           <div class="hero-meta reveal">
             <span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="hero.m1">Windows 10 &amp; 11 (64-bit)</span></span>
@@ -126,7 +128,7 @@
                   <span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-chart"/></svg>Savings</span>
                   <span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-sliders"/></svg>Settings</span>
                 </nav>
-                <div class="ver">v1.1.1 · up to date</div>
+                <div class="ver">v1.1.2 · up to date</div>
               </aside>
               <div class="win-main">
                 <div class="win-top">
@@ -175,7 +177,7 @@
     </section>
 
     <!-- ================= Interactive demo ================= -->
-    <section class="section" id="demo" aria-labelledby="demo-title">
+    <section class="section" id="demo" data-level="adv" aria-labelledby="demo-title">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="demo.eyebrow">Live interactive simulator</span>
@@ -194,7 +196,7 @@
                   <span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-chart"/></svg>Savings</span>
                   <span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-sliders"/></svg>Settings</span>
                 </nav>
-                <div class="ver">v1.1.1 · up to date</div>
+                <div class="ver">v1.1.2 · up to date</div>
               </aside>
               <div class="win-main">
                 <div class="win-top">
@@ -224,8 +226,8 @@
                 <div class="w-card" style="padding:.7rem .9rem"><span id="simModeDesc" class="w-hint" style="justify-content:flex-start;color:#cbd5e1">⚖️ BALANCED: screen 100% • dynamic CPU scaling — the perfect everyday balance.</span></div>
                 <div class="w-row two">
                   <div class="w-card w-slider">
-                    <div class="top"><label class="w-label" for="simBright">Screen brightness</label><b id="simBrightVal">100%</b></div>
-                    <input type="range" id="simBright" min="0" max="100" value="100" step="1">
+                    <div class="top"><label class="w-label" for="simBright">Screen brightness</label><b id="simBrightVal">80%</b></div>
+                    <input type="range" id="simBright" min="0" max="100" value="80" step="1">
                     <span class="w-hint">DDC/CI (desktop) · WMI (laptop)</span>
                   </div>
                   <div class="w-card">
@@ -295,7 +297,7 @@
     </section>
 
     <!-- ================= Smart shield + CLI ================= -->
-    <section class="section" id="smart" aria-labelledby="smart-title">
+    <section class="section" id="smart" data-level="adv" aria-labelledby="smart-title">
       <div class="container">
         <div class="panel reveal">
           <div class="shield-grid">
@@ -337,7 +339,7 @@
     </section>
 
     <!-- ================= Calculator ================= -->
-    <section class="section" id="calculator" aria-labelledby="calc-title">
+    <section class="section" id="calculator" data-level="adv" aria-labelledby="calc-title">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="calc.eyebrow">Financial ROI simulator</span>
@@ -405,34 +407,34 @@
     </section>
 
     <!-- ================= What's new ================= -->
-    <section class="section" id="new" aria-labelledby="new-title">
+    <section class="section" id="new" data-level="adv" aria-labelledby="new-title">
       <div class="container">
         <div class="section-head reveal">
-          <span class="vbadge"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-sparkles"/></svg>v1.1.0</span>
-          <h2 class="title" id="new-title" style="margin-top:.9rem" data-i18n="new.title">What's new in v1.1.0</h2>
-          <p class="lead"><span data-i18n="new.lead">A redesigned dashboard, a noticeably smoother UI and a round of important fixes.</span> <span class="mono" style="font-size:.85em">2026-11-11</span></p>
+          <span class="vbadge"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-sparkles"/></svg>v1.1.2</span>
+          <h2 class="title" id="new-title" style="margin-top:.9rem" data-i18n="new.title">What's new in v1.1.2</h2>
+          <p class="lead"><span data-i18n="new.lead">Clearer screens, a shutdown schedule that stays, and automatic updates.</span> <span class="mono" style="font-size:.85em">2026-11-11</span></p>
         </div>
         <div class="new-grid">
           <article class="card reveal c-em"><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-sparkles"/></svg></div><h3 data-i18n="n1.t">New design</h3>
-            <ul class="ticks"><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n1.a"><b>Redesigned dashboard</b> with sidebar navigation</span></li><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n1.b"><b>Live power gauge</b> with per-component breakdown</span></li></ul></article>
-          <article class="card reveal c-cy"><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-gauge"/></svg></div><h3 data-i18n="n2.t">Faster &amp; smoother</h3>
-            <ul class="ticks"><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n2.a"><b>No more UI lag</b> — background commands no longer block the window</span></li><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n2.b"><b>Non-blocking brightness</b> with correct DDC/CI range scaling per monitor</span></li></ul></article>
-          <article class="card reveal c-am"><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg></div><h3 data-i18n="n3.t">Fixes</h3>
+            <ul class="ticks"><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n1.a"><b>Larger, clearer text</b>, and every screen fits the window without scrolling</span></li><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n1.b"><b>New logo</b>, lighter and sharper</span></li></ul></article>
+          <article class="card reveal c-cy"><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-gauge"/></svg></div><h3 data-i18n="n2.t">Scheduled shutdown</h3>
+            <ul class="ticks"><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n2.a"><b>You set the time.</b> If you have not, the app asks</span></li><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n2.b"><b>The schedule is kept</b> after an update or after deleting the file</span></li></ul></article>
+          <article class="card reveal c-am"><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg></div><h3 data-i18n="n3.t">Brightness &amp; fixes</h3>
             <ul class="ticks">
-              <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n3.a">Brightness is <b>no longer reset to 100%</b> on launch</span></li>
-              <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n3.b">The <b>electricity tariff</b> setting now actually applies</span></li>
-              <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n3.c"><b>True year-to-date</b> savings</span></li>
+              <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n3.a">Brightness per mode: <b>Eco 10%, Balanced 80%, Max 100%</b></span></li>
+              <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n3.b">Fixed: brightness now changes on the <b>laptop screen</b> too</span></li>
+              <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n3.c">New calculation: <b>last 12 months</b> and a prediction for the next 12</span></li>
               <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n3.d">Shutdown <b>snooze really reschedules</b></span></li>
-              <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n3.e">CLI: <code>--status</code> detects Eco correctly; <b>laptop brightness via CLI</b> works</span></li>
+              <li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n3.e">CLI: <code>--status</code> detects Eco correctly</span></li>
             </ul></article>
-          <article class="card reveal c-vi"><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-shield"/></svg></div><h3 data-i18n="n4.t">Safer updates</h3>
-            <ul class="ticks"><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n4.a"><b>Safer in-app updater</b> with integrity checks</span></li><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n4.b"><b>Opt-in automatic update check</b> — off by default, nothing contacts the network unless you choose</span></li></ul></article>
+          <article class="card reveal c-vi"><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-shield"/></svg></div><h3 data-i18n="n4.t">Updates</h3>
+            <ul class="ticks"><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n4.a"><b>Automatic updates, always on</b>, without asking</span></li><li><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-check"/></svg><span data-i18n="n4.b">Every update is checked before installing (size, integrity and SHA-256)</span></li></ul></article>
         </div>
       </div>
     </section>
 
     <!-- ================= Specs ================= -->
-    <section class="section-tight" id="specs" aria-labelledby="spec-title">
+    <section class="section-tight" id="specs" data-level="adv" aria-labelledby="spec-title">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="spec.eyebrow">Architecture &amp; privacy</span>
@@ -443,9 +445,9 @@
           <div class="card reveal spec">
             <div><span data-i18n="spec.os">Operating system</span><b>Windows 10 &amp; 11 (64-bit)</b></div>
             <div><span data-i18n="spec.arch">Architecture</span><b>x86_64 standalone .exe</b></div>
-            <div><span data-i18n="spec.size">Binary size</span><b>17.1 MB</b></div>
-            <div><span data-i18n="spec.ver">Version</span><b>1.1.1 · 2026-11-11</b></div>
-            <div><span data-i18n="spec.net">Network use</span><b data-i18n="spec.netv">Only on-demand update check (GitHub)</b></div>
+            <div><span data-i18n="spec.size">Binary size</span><b>16.0 MB</b></div>
+            <div><span data-i18n="spec.ver">Version</span><b>1.1.2 · 2026-11-11</b></div>
+            <div><span data-i18n="spec.net">Network use</span><b data-i18n="spec.netv">Only updates from GitHub</b></div>
           </div>
           <div class="card reveal spec">
             <div><span data-i18n="spec.ipc">Single-instance IPC</span><b>Win32 named event</b></div>
@@ -459,17 +461,17 @@
     </section>
 
     <!-- ================= Security ================= -->
-    <section class="section" id="security" aria-labelledby="sec-title">
+    <section class="section" id="security" data-level="adv" aria-labelledby="sec-title">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="sec.eyebrow">Security &amp; integrity</span>
           <h2 class="title" id="sec-title" data-i18n="sec.title">Private and verifiable by design</h2>
-          <p class="lead" data-i18n="sec.lead">Energy tools should earn trust. EcoPower Suite has no telemetry, no accounts, no ads — and the only time it ever touches the network is when you ask it to check for an update.</p>
+          <p class="lead" data-i18n="sec.lead">Energy tools should earn trust. EcoPower Suite has no telemetry, no accounts, no ads — and the only network use is checking for and downloading updates from GitHub.</p>
         </div>
         <div class="grid g2">
           <article class="card reveal c-em" style="display:flex;flex-direction:column;justify-content:space-between"><div><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-shield"/></svg></div><h3 data-i18n="sc1.t">Verify it yourself</h3><p data-i18n="sc1.p">Don't take our word for it: look up the SHA-256 below on VirusTotal, or upload the file and let dozens of antivirus engines scan it live. Compare the hash with what you downloaded.</p></div>
-            <div class="btn-row" style="margin-top:1.1rem"><a class="btn btn-sm" href="https://www.virustotal.com/gui/file/5838F5E89D73B47A0D705E10193336CA0AA53E68A162B16B978EDFAFFB517C5D" target="_blank" rel="noopener noreferrer"><span data-i18n="sc1.a">Look up hash on VirusTotal</span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-external"/></svg></a><a class="btn btn-sm" href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener noreferrer"><span data-i18n="sc1.b">Upload &amp; scan a file</span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-external"/></svg></a></div></article>
-          <article class="card reveal c-cy"><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg></div><h3 data-i18n="sc2.t">Offline by design</h3><p data-i18n="sc2.p">No telemetry, no personal identifiers, no uploads. Power control runs on local Windows APIs. The one exception is optional: when you click <strong>Check for updates</strong> (or opt in to the automatic check), the app contacts GitHub to read the latest release and download it.</p>
+            <div class="btn-row" style="margin-top:1.1rem"><a class="btn btn-sm" href="https://www.virustotal.com/gui/file/32A4C81DD35940A466DDD693C014D4A5822B220909E0B2779E2CD6972F8A481E" target="_blank" rel="noopener noreferrer"><span data-i18n="sc1.a">Look up hash on VirusTotal</span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-external"/></svg></a><a class="btn btn-sm" href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener noreferrer"><span data-i18n="sc1.b">Upload &amp; scan a file</span><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-external"/></svg></a></div></article>
+          <article class="card reveal c-cy"><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg></div><h3 data-i18n="sc2.t">Offline by design</h3><p data-i18n="sc2.p">No telemetry, no personal identifiers, no uploads. Power control runs on local Windows APIs. The only network activity is checking for and downloading updates from GitHub. Each update is verified before it is installed.</p>
             <div class="stat-line"><span data-i18n="sc2.s">Network activity</span><b data-i18n="sc2.v">Only GitHub, only for updates</b></div></article>
           <article class="card reveal c-sky"><div class="ico"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-bolt"/></svg></div><h3 data-i18n="sc3.t">Non-destructive execution</h3><p data-i18n="sc3.p">No kernel drivers and no permanent system hacks — just sanctioned Win32 APIs (<code>powercfg</code>, <code>dxva2.dll</code>, WMI). <strong>Exit &amp; Restore</strong> returns your power plan to Balanced.</p>
             <div class="stat-line"><span data-i18n="sc3.s">Removal</span><b data-i18n="sc3.v">Exit &amp; Restore, then delete the file</b></div></article>
@@ -488,7 +490,7 @@
             </div>
           </div>
           <div>
-            <div class="field-head"><h4 style="font-size:1rem" data-i18n="vc.t">Run the local SHA-256 check</h4><span class="badge-mono">v1.1.1</span></div>
+            <div class="field-head"><h4 style="font-size:1rem" data-i18n="vc.t">Run the local SHA-256 check</h4><span class="badge-mono">v1.1.2</span></div>
             <p class="muted" style="font-size:.88rem;margin-bottom:.8rem" data-i18n="vc.p">Open PowerShell in the folder of the download and run:</p>
             <div class="codebox"><code>Get-FileHash .\EcoPowerSuite.exe -Algorithm SHA256</code><button type="button" class="btn btn-sm" id="btnCopyPs"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-copy"/></svg><span id="lblCopyPs">Copy command</span></button></div>
           </div>
@@ -508,14 +510,14 @@
         <div class="panel dl-panel reveal">
           <h2 class="title" id="dl-title" style="font-size:clamp(1.9rem,4.4vw,3rem)" data-i18n="dl.title">Ready to optimize your power?</h2>
           <p class="lead" data-i18n="dl.lead">No installer, no adware, no telemetry. Just double-click and run.</p>
-          <div class="dl-meta"><span>v1.1.1</span><span>Windows 10/11 x64</span><span>17.1 MB</span><span>2026-11-11</span></div>
+          <div class="dl-meta"><span>v1.1.2</span><span>Windows 10/11 x64</span><span>16.0 MB</span><span>2026-11-11</span></div>
           <div class="btn-row" style="justify-content:center">
-            <a class="btn btn-primary btn-lg" data-dl="cta_bottom" href="https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.1/EcoPowerSuite.exe" download="EcoPowerSuite.exe"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-download"/></svg><span data-i18n="dl.btn">Download EcoPowerSuite.exe (v1.1.1)</span></a>
+            <a class="btn btn-primary btn-lg" data-dl="cta_bottom" href="https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.2/EcoPowerSuite.exe" download="EcoPowerSuite.exe"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-download"/></svg><span data-i18n="dl.btn">Download EcoPowerSuite.exe (v1.1.2)</span></a>
             <a class="btn btn-lg" data-dl="mirror" href="downloads/EcoPowerSuite.exe" download="EcoPowerSuite.exe"><span data-i18n="dl.mirror">Direct mirror</span></a>
           </div>
           <div class="hashbox" translate="no">
             <div class="hd"><span>SHA-256 checksum</span><button type="button" id="btnCopyHash"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-copy"/></svg><span id="lblCopyHash">Copy hash</span></button></div>
-            <code id="hashValue">5838F5E89D73B47A0D705E10193336CA0AA53E68A162B16B978EDFAFFB517C5D</code>
+            <code id="hashValue">32A4C81DD35940A466DDD693C014D4A5822B220909E0B2779E2CD6972F8A481E</code>
           </div>
         </div>
       </div>
@@ -554,10 +556,10 @@
           <details class="qa reveal"><summary data-i18n="q2.q">Will watching movies or playing games get interrupted?</summary><div class="ans" data-i18n="q2.a">No. The Smart Inactivity Shield tracks Windows audio streams, fullscreen windows, gamepads (XInput) and local AI workloads. While any of them is active, auto-idle dimming is paused.</div></details>
           <details class="qa reveal"><summary data-i18n="q3.q">Does it support multiple monitors?</summary><div class="ans" data-i18n="q3.a">Yes. It enumerates every monitor on HDMI, DisplayPort or USB-C and sends DDC/CI brightness commands (scaled to each monitor's real range) in addition to laptop internal screens via WMI.</div></details>
           <details class="qa reveal"><summary data-i18n="q4.q">How does it start with Windows?</summary><div class="ans" data-i18n="q4.a">If enabled in Settings, it registers under <code>HKCU\…\CurrentVersion\Run</code> with the <code>--minimized</code> flag and starts silently in the system tray. You can turn it off at any time.</div></details>
-          <details class="qa reveal"><summary data-i18n="q5.q">Does it connect to the internet?</summary><div class="ans" data-i18n="q5.a">Not for anything it does day to day. The only network activity is the update check and download from GitHub — when you click <em>Check for updates</em>, or if you opt in to the automatic check (off by default in v1.1.0). There is no telemetry.</div></details>
+          <details class="qa reveal"><summary data-i18n="q5.q">Does it connect to the internet?</summary><div class="ans" data-i18n="q5.a">Not for anything it does day to day. Only to check for and download updates from GitHub. The check runs at launch and every 6 hours, and the update is installed automatically after it is verified. There is no telemetry.</div></details>
           <details class="qa reveal"><summary data-i18n="q6.q">Will it change my Windows settings?</summary><div class="ans" data-i18n="q6.a">It switches between Windows power plans and sets CPU, PCIe link-state and screen-timeout values on them, plus monitor brightness. <strong>Exit &amp; Restore</strong> in Settings switches back to Balanced and restores your brightness.</div></details>
           <details class="qa reveal"><summary data-i18n="q7.q">Is it free? Is it open source?</summary><div class="ans" data-i18n="q7.a">It is free to use with no ads, supported by voluntary donations. It is proprietary closed-source software, so you can't read its code — which is why we publish checksums and encourage scanning the file yourself.</div></details>
-          <details class="qa reveal"><summary data-i18n="q8.q">How do I uninstall it?</summary><div class="ans" data-i18n="q8.a">There is no installer. Open Settings → <em>Exit &amp; Restore System Defaults</em>, disable the scheduled shutdown if you enabled it, then delete the .exe. Turning off "Start with Windows" removes the autostart entry first.</div></details>
+          <details class="qa reveal"><summary data-i18n="q8.q">How do I uninstall it?</summary><div class="ans" data-i18n="q8.a">There is no installer. Open Settings → <em>Exit and restore</em>. If you set a scheduled shutdown, turn it off first on the Auto Shutdown page (the schedule is kept even after the file is deleted), then delete the .exe. You can also turn off "Start with Windows".</div></details>
         </div>
       </div>
     </section>
@@ -569,7 +571,7 @@
       <div class="foot-top">
         <a href="#top" class="brand"><img src="assets/logo-96.png" alt="" width="30" height="30"><span><span class="brand-name">EcoPower <b>Suite</b></span><span class="brand-sub" data-i18n="foot.tag">Intelligent Windows energy &amp; battery optimization</span></span></a>
         <div class="foot-links">
-          <a href="#security" data-i18n="foot.sec">Security &amp; verification</a>
+          <a href="#security" data-level="adv" data-i18n="foot.sec">Security &amp; verification</a>
           <a href="https://www.paypal.com/ncp/payment/TTMZVMEH9EADL" target="_blank" rel="noopener noreferrer" data-i18n="foot.pp">Support the developer</a>
           <a href="#share" data-i18n="foot.share">Share</a>
           <a href="llms.txt">llms.txt</a>

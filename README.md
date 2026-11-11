@@ -3,25 +3,25 @@
 Official public repository for **EcoPower Suite** — the intelligent Windows desktop utility for hardware energy optimization, power-scheme management, DDC/CI monitor dimming, AI/bot workload protection and battery-life maximization.
 
 🌐 **Website**: <https://bambadooma-star.github.io/ecopower-suite-app/>  
-📦 **Latest release**: [v1.1.1](https://github.com/bambadooma-star/ecopower-suite-app/releases/tag/v1.1.1)  
+📦 **Latest release**: [v1.1.2](https://github.com/bambadooma-star/ecopower-suite-app/releases/tag/v1.1.2)  
 🤖 **AI documentation**: [llms.txt](https://bambadooma-star.github.io/ecopower-suite-app/llms.txt)
 
 ---
 
 ## ⚡ Download
-- **Executable**: [EcoPowerSuite.exe (v1.1.1)](https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.1/EcoPowerSuite.exe)
+- **Executable**: [EcoPowerSuite.exe (v1.1.2)](https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.2/EcoPowerSuite.exe)
 - **Direct mirror**: [downloads/EcoPowerSuite.exe](https://bambadooma-star.github.io/ecopower-suite-app/downloads/EcoPowerSuite.exe)
-- **Size**: 17.1 MB (single file, no installer)
+- **Size**: 16.0 MB (single file, no installer)
 - **Platform**: Windows 10 & 11 (64-bit, x86_64)
 - **Release date**: 2026-11-11
-- **SHA-256**: `5838F5E89D73B47A0D705E10193336CA0AA53E68A162B16B978EDFAFFB517C5D`
+- **SHA-256**: `32A4C81DD35940A466DDD693C014D4A5822B220909E0B2779E2CD6972F8A481E`
 
 ### 🔑 Verify the download (PowerShell)
 ```powershell
 Get-FileHash .\EcoPowerSuite.exe -Algorithm SHA256
 ```
 The output must match the SHA-256 above. You can also look the hash up on VirusTotal:
-<https://www.virustotal.com/gui/file/5838F5E89D73B47A0D705E10193336CA0AA53E68A162B16B978EDFAFFB517C5D> (or upload the file at <https://www.virustotal.com/gui/home/upload>) and review the engines' verdicts yourself.
+<https://www.virustotal.com/gui/file/32A4C81DD35940A466DDD693C014D4A5822B220909E0B2779E2CD6972F8A481E> (or upload the file at <https://www.virustotal.com/gui/home/upload>) and review the engines' verdicts yourself.
 
 ---
 
@@ -30,7 +30,7 @@ The output must match the SHA-256 above. You can also look the hash up on VirusT
 - Smoother, faster UI — background commands no longer block the window.
 - Non-blocking brightness control with correct DDC/CI range scaling.
 - **Fixes**: brightness no longer reset to 100% on launch · electricity tariff setting now applies · true year-to-date savings · shutdown snooze really reschedules · CLI `--status` detects Eco correctly · laptop brightness via CLI works.
-- Safer in-app updater (integrity checks) and an **opt-in** automatic update check (off by default).
+- Automatic updates, always on and verified before installing.
 
 ---
 
@@ -49,7 +49,7 @@ The output must match the SHA-256 above. You can also look the hash up on VirusT
 
 ## 🛡️ Security & Privacy
 - **Verify it yourself**: published SHA-256 checksum and a VirusTotal hash-lookup/upload link — don't take our word for it.
-- **No telemetry, no accounts, no ads.** Power control runs through local Windows APIs. The only network activity is an **optional, user-initiated update check and download from GitHub** (`api.github.com` / `github.com` releases): when you click *Check for updates*, or if you opt in to the automatic check (off by default in v1.1.0).
+- **No telemetry, no accounts, no ads.** Power control runs through local Windows APIs. The only network activity is the **automatic update check and download from GitHub** (`api.github.com` / `github.com` releases), at launch and every 6 hours. Each update is verified before it is installed.
 - **Non-destructive**: no kernel drivers, no permanent system modifications. *Exit & Restore* returns the power plan to Balanced; remove the app by deleting the single file.
 - **Windows SmartScreen**: for a new, unsigned free utility Windows may show *Unknown publisher*. Click **More info → Run anyway** after confirming the SHA-256 matches.
 
