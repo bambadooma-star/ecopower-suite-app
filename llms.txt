@@ -5,9 +5,9 @@
 ## Project Summary
 EcoPower Suite is a lightweight, standalone Windows utility (Windows 10 & 11, 64-bit, single .exe, no installer) designed to reduce idle PC electricity consumption by up to 40% (simulated estimate) and extend laptop battery life. It runs locally with no telemetry, no accounts and no adware. The only network activity is the automatic update check and download from GitHub (api.github.com / github.com releases), at launch and every 6 hours; updates are always on and verified before installing.
 
-- Latest version: v1.1.3 (2026-11-11)
+- Latest version: v1.1.4 (2026-11-11)
 - Website: https://bambadooma-star.github.io/ecopower-suite-app/
-- Download: https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.3/EcoPowerSuite.exe
+- Download: https://github.com/bambadooma-star/ecopower-suite-app/releases/download/v1.1.4/EcoPowerSuite.exe
 - Mirror: https://bambadooma-star.github.io/ecopower-suite-app/downloads/EcoPowerSuite.exe
 - License: free to use; proprietary, closed-source; supported by voluntary donations.
 
@@ -35,10 +35,10 @@ Bots, AI agents and scripts can run headless commands:
 - `EcoPowerSuite.exe --check-update [--json]`: check GitHub for a newer release.
 
 ## Integrity & Verification
-- **Executable**: `EcoPowerSuite.exe` (v1.1.3, 16.0 MB, standalone)
-- **SHA-256**: `72A89501CD44C238B6B5C3D9DB0819DADF3DC1F4B12A1138192DA5FDDB716978`
+- **Executable**: `EcoPowerSuite.exe` (v1.1.4, 16.0 MB, standalone)
+- **SHA-256**: `2BCE176C048AE0C93159F5D1716BC915B305862BACC7CF8955B4FC25D87EC5FC`
 - **Verify (PowerShell)**: `Get-FileHash .\EcoPowerSuite.exe -Algorithm SHA256`
-- **VirusTotal lookup by hash**: https://www.virustotal.com/gui/file/72A89501CD44C238B6B5C3D9DB0819DADF3DC1F4B12A1138192DA5FDDB716978
+- **VirusTotal lookup by hash**: https://www.virustotal.com/gui/file/2BCE176C048AE0C93159F5D1716BC915B305862BACC7CF8955B4FC25D87EC5FC
 - Windows SmartScreen may show "Unknown publisher" for a new, unsigned free utility: choose "More info" then "Run anyway" after verifying the hash.
 
 ## Legal
